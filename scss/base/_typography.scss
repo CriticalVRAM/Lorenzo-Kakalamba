@@ -1,10 +1,25 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:300,400,400i,600");
-$font-heading: "Open Sans", "Lucida Grande", Tahoma, Sans-Serif;
-$font: "Open Sans Condensed", "Lucida Grande", Tahoma, Sans-Serif;
+$font-heading: "Open Sans Condensed", "Lucida Grande", Tahoma, Sans-Serif;
+$font: "Open Sans", "Lucida Grande", Tahoma, Sans-Serif;
 
 body {
     font-family: $font;
-    font-weight: 400;
     line-height: 1.15rem;
+    color: gray;
 }
 
+
+.heading1 {
+    font-family: $font-heading;
+    font-size: 64rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.heading2 {
+    font-weight: 400;
+}
+
+.heading3 {
+    font-weight: 300;
+}

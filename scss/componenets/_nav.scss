@@ -1,0 +1,39 @@
+.nav {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    background-color: $red-dark;
+    padding: 10rem;
+    box-shadow: 6px 6px 20px 0px rgba(0,0,0,0.3);
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
+        grid-auto-flow: dense;
+        align-items: center;
+        justify-items: center;
+
+        list-style: none;
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        color: white;
+        padding: 20rem;
+        background-color: $red;
+        border-radius: 3px;
+    }
+    &__link:hover {
+        
+    }
+    &__link:active {
+        
+    }
+
+    &__logo{
+        width: 100%;
+        height: auto;
+        grid-column: 4 / 5;
+    }
+}
