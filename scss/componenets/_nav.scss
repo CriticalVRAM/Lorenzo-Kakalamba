@@ -2,9 +2,18 @@
     position: absolute;
     width: 100vw;
     top: 0;
-    background-color: $red-dark;
     padding: 10rem;
-    box-shadow: 6px 6px 20px 0px rgba(0,0,0,0.3);
+
+    &__logo{
+        width: 100%;
+        height: auto;
+        grid-column: 4 / 5;
+
+        background-image: url(/img/cloud.png);
+        background-position: center;
+        background-size: 80% 100%;
+        background-repeat: no-repeat;
+    }
 
     &__list {
         display: grid;
@@ -16,24 +25,40 @@
         list-style: none;
     }
 
-    &__link:link,
-    &__link:visited {
-        text-decoration: none;
-        color: white;
-        padding: 20rem;
-        background-color: $red;
-        border-radius: 3px;
-    }
-    &__link:hover {
-        
-    }
-    &__link:active {
-        
+    &__item {
+        padding: 10rem;
+        background-image: url(/img/cloud.png);
+        background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
     }
 
-    &__logo{
-        width: 100%;
-        height: auto;
-        grid-column: 4 / 5;
+    &__link:link,
+    &__link:visited {
+        display: flex;
+        align-items: center;
+        font-size: 25rem;
+        font-weight: 400;
+
+        text-decoration: none;
+        color: $red;
+        padding: 20rem;
+        border-radius: 3px;
+        transition: .3s;
+    }
+    &__link:hover {
+        transform: scale(1.1);
+    }
+
+    &__icon {
+        width: 25rem;
+        height: 25rem;
+        fill: $red;
+        margin-left: 15rem;
+        transition: .3s;
+    }
+
+    &__link:hover &__icon {
+        transform: rotate(-10deg) scale(1.5);
     }
 }

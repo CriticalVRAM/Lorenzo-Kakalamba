@@ -3,17 +3,26 @@
     height: 100vh;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(/img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     &__container {
         max-width: 75%;
-        display: grid;
-        grid-template-rows: 1fr 1fr 2fr;
+        text-align: center;
 
-        justify-items: center;
+        display: grid;
+        grid-template-rows: min-content min-content min-content;
         align-items: center;
+        grid-row-gap: 20rem;
+    }
+
+    &__item {
+        background-color: $red;
     }
 
     &__button {
@@ -26,7 +35,8 @@
 
     &__icon {
         fill: $red;
-        width: 25rem;
-        height: 25rem;
+        width: 45rem;
+        height: 45rem;
+        margin-top: -15rem;
     }
 }
