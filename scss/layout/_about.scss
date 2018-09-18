@@ -1,17 +1,39 @@
 .about {
-    position: relative;
     width: 100vw;
+    max-width: 100%;
+
     display: grid;
-    grid-template-columns: 700px 700px;
-    grid-template-rows: 500px 200px;
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: max-content min-content;
+    grid-gap: 40rem;
+    justify-content: center;
+
+    padding: 120rem 30rem 120rem 30rem;
+
+    background-color: $red;
+
+
+    &__text {
+        grid-column: 2 / 3;
+
+        p span {
+            color: $orange;
+        }
+    }
 
     &__image {
         width: 100%;
     }
-    &__award {
-        width: 100%;
-    }
+
     &__awards {
-        grid-column: 1 / span 2;
+        grid-column: 2 / 3;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__slideshow {
+        grid-row: 1 / span 2;
+        align-self: center;
     }
 }
