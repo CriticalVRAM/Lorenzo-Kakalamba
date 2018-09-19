@@ -3,18 +3,33 @@
     max-width: 100%;
 
     display: grid;
-    grid-template-columns: 50% 1fr;
-    grid-template-rows: max-content min-content;
+    grid-template-columns: 50% 1fr 1fr;
+    grid-template-rows: min-content 4fr min-content;
+    grid-auto-flow: dense;
     grid-gap: 40rem;
     justify-content: center;
 
     padding: 120rem 30rem 120rem 30rem;
-
     background-color: $red;
 
 
+    &__click {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        align-self: center;
+        justify-self: end;
+        margin-right: 50rem;
+
+        svg {
+            width: 60rem;
+            height: 60rem;
+            fill: white;
+        }
+    }
+
     &__text {
-        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        grid-column: 2 / 4; 
 
         p span {
             color: $orange;
@@ -26,14 +41,21 @@
     }
 
     &__awards {
-        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        grid-column: 2 / 4;
         img {
             width: 100%;
         }
     }
 
     &__slideshow {
-        grid-row: 1 / span 2;
+        grid-row: 1 / span 3;
         align-self: center;
     }
+
+    &__heading {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+    }
+
 }

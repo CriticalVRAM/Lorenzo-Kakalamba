@@ -10,18 +10,19 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css">
     <link rel="stylesheet" href="/node_modules/animate.css/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 </head>
 
 <body>
-    <nav class="nav">
+    <nav class="nav" data-aos="fade-down">
         <ul class="nav__list">
             <img src="/img/logo1.png" alt="Navigation logo" class="nav__logo">
             <li class="nav__item"><a href="#" class="nav__link">
                     <span>About Us</span>
                     <svg class="nav__icon">
-                        <use xlink:href="/img/sprite.svg#icon-emoji-happy"></use>
+                        <use xlink:href="/img/sprite.svg#icon-star"></use>
                     </svg>
                 </a></li>
             <li class="nav__item"><a href="#" class="nav__link">
@@ -61,11 +62,11 @@
     <header class="header">
 
         <div class="header__container">
-            <h1 class="heading1">Premium Italian Food</h1>
-            <h2 class="heading2 mb-huge">in a incredible ambience</h2>
-            <div class="header__button">
+            <h1 class="heading1" data-aos="fade-left">Premium Italian Food</h1>
+            <h2 class="heading2 mb-huge" data-aos="fade-left">in a incredible ambience</h2>
+            <div class="header__button" data-aos="fade-right">
                 <h3 class="heading3">Learn more</h3>
-                <a href="#">
+                <a href="#about">
                     <svg class="header__icon animated fadeInDown delay-1s">
                         <use xlink:href="/img/sprite.svg#icon-chevron-with-circle-down"></use>
                     </svg>
@@ -76,18 +77,23 @@
     </header>
 
 
-    <section class="about">
+    <section class="about" id="about">
 
-        <div class="about__slideshow">
-            <div class="about__slide"><img src="/img/hero.jpg" alt="slide 1" class="about__image"></div>
-            <div class="about__slide"><img src="/img/hero.jpg" alt="slide 2" class="about__image"></div>
-            <div class="about__slide"><img src="/img/hero.jpg" alt="slide 3" class="about__image"></div>
-            <div class="about__slide"><img src="/img/hero.jpg" alt="slide 4" class="about__image"></div>
-            <div class="about__slide"><img src="/img/hero.jpg" alt="slide 5" class="about__image"></div>
+        <div class="about__slideshow" data-aos="fade-left">
+            <div class="about__slide"><img src="/img/slide1.jpg" alt="slide 1" class="about__image"></div>
+            <div class="about__slide"><img src="/img/slide2.jpg" alt="slide 2" class="about__image"></div>
+            <div class="about__slide"><img src="/img/slide3.jpg" alt="slide 3" class="about__image"></div>
+            <div class="about__slide"><img src="/img/slide4.jpg" alt="slide 4" class="about__image"></div>
+            <div class="about__slide"><img src="/img/slide5.jpg" alt="slide 5" class="about__image"></div>
         </div>
 
-        <div class="about__text">
-            <h4 class="heading4 mb-medium">About us</h4>
+        <h4 class="heading4 about__heading" data-aos="fade-right">About us</h4>
+        <a href="#" class="about__click" data-aos="fade-right">
+            <svg class="about__icon">
+                <use xlink:href="/img/sprite.svg#icon-chevron-with-circle-right"></use>
+            </svg>
+        </a>
+        <div class="about__text" data-aos="fade-right">
             <p class="par">
                 <span>"WhereYouEatWell Lorenzo and KAKALAMBA"</span> is the original space with the unique conception
                 based on the
@@ -121,6 +127,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/js/index.js"></script>
 
 
