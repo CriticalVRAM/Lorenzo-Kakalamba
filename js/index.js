@@ -10,3 +10,5 @@ $(document).ready(function () {
         arrows: false
     })
 })
+
+$('.tabs').tabslet()
