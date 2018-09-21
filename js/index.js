@@ -11,4 +11,4 @@ $(document).ready(function () {
     })
 })
 
-$('.tabs').tabslet()
+$('.menu__box').tabslet()

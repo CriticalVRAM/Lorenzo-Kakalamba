@@ -31,8 +31,13 @@ body {
 .heading4 {
     font-family: $font-heading;
     font-size: 72rem;
-    font-weight: 300;
     text-transform: uppercase;
+}
+
+.heading5 {
+    font-family: $font-heading;
+    font-size: 22rem;
+
 }
 
 .par {
