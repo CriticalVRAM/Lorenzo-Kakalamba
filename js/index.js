@@ -11,4 +11,7 @@ $(document).ready(function () {
     })
 })
 
-$('.menu__box').tabslet()
+$('.menu__box').tabslet({
+    animation: true,
+    active: 1,
+})

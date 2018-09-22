@@ -39,6 +39,14 @@
         }
     }
 
+    &__tab-btn {
+        transition: .3s;
+        &:focus {
+            border-bottom: 5px solid $red-light;
+            font-size: 28rem;
+        }
+    }
+
     &__list {
         list-style: none;
     }
@@ -59,5 +67,10 @@
 
         font-family: $font-heading;
         font-size: 30rem;
+    }
+
+    &__desc {
+        font-size: 16rem;
+        font-style: italic;
     }
 }
