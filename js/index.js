@@ -1,17 +1,19 @@
-var scroll = new SmoothScroll('a[href*="#"]')
-
-AOS.init({
-    duration: 1200,
-})
-
 $(document).ready(function () {
-    $('.about__slideshow').slick({
-        autoplay: true,
-        arrows: false
-    })
-})
+    var scroll = new SmoothScroll('a[href*="#"]')
 
-$('.menu__box').tabslet({
-    animation: true,
-    active: 1,
+    AOS.init({
+        duration: 1200,
+    })
+
+    $(document).ready(function () {
+        $('.about__slideshow').slick({
+            autoplay: true,
+            arrows: false
+        })
+    })
+
+    $('.menu__box').tabslet({
+        animation: true,
+        active: 2,
+    })
 })
