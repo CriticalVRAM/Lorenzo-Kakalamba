@@ -8,10 +8,6 @@
 
     background-color: $red-dark;
 
-    &__box {
-        display: grid;
-    }
-
     &__tabs {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
