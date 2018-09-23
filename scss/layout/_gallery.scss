@@ -28,6 +28,13 @@
             color: white;
         }
     }
+    &__tab {
+        transition: .3s;
+        &:focus {
+            border-bottom: 5px solid $red-light;
+            font-size: 34rem;
+        }
+    }
 
     &__interior-view {
         position: relative;
