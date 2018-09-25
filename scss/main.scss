@@ -25,7 +25,8 @@
   'layout/about',
   'layout/menu',
   'layout/special',
-  'layout/gallery';
+  'layout/gallery',
+  'layout/booking';
 
 // 5. Components
 @import
@@ -35,7 +36,3 @@
 // 6. Page-specific styles
 @import
   'pages/home';
-
-// 7. Themes
-@import
-'theme/theme';
