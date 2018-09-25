@@ -26,18 +26,16 @@ $(document).ready(function () {
             `
             <div class="gallery__${cur}">
                 <div class="gallery__${cur}-selected">
-                    <img src="/img/2-enterijer.jpg" alt="Interior image 1" class="gallery__image">
-                    <img src="/img/3-enterijer.jpg" alt="Interior image 2" class="gallery__image">
-                    <img src="/img/4-enterijer.jpg" alt="Interior image 3" class="gallery__image">
-                    <img src="/img/5-enterijer.jpg" alt="Interior image 4" class="gallery__image">
-                    <img src="/img/2-enterijer.jpg" alt="Interior image 1" class="gallery__image">
+                    <img src="/img/${cur}1.jpg" alt="${cur} image 1" class="gallery__image">
+                    <img src="/img/${cur}2.jpg" alt="${cur} image 2" class="gallery__image">
+                    <img src="/img/${cur}3.jpg" alt="${cur} image 3" class="gallery__image">
+                    <img src="/img/${cur}4.jpg" alt="${cur} image 4" class="gallery__image">
                 </div>
                 <div class="gallery__${cur}-view">
-                    <img src="/img/2-enterijer.jpg" alt="Interior image 1" class="gallery__image">
-                    <img src="/img/3-enterijer.jpg" alt="Interior image 2" class="gallery__image">
-                    <img src="/img/4-enterijer.jpg" alt="Interior image 3" class="gallery__image">
-                    <img src="/img/5-enterijer.jpg" alt="Interior image 4" class="gallery__image">
-                    <img src="/img/2-enterijer.jpg" alt="Interior image 1" class="gallery__image">
+                    <img src="/img/${cur}1.jpg" alt="${cur} image 1" class="gallery__image">
+                    <img src="/img/${cur}2.jpg" alt="${cur} image 2" class="gallery__image">
+                    <img src="/img/${cur}3.jpg" alt="${cur} image 3" class="gallery__image">
+                    <img src="/img/${cur}4.jpg" alt="${cur} image 4" class="gallery__image">
                 </div>
             </div>
             `
@@ -51,7 +49,7 @@ $(document).ready(function () {
                 asNavFor: `.gallery__${cur}-view`
             })
             $(`.gallery__${cur}-view`).slick({
-                slidesToShow: 4,
+                slidesToShow: 3,
                 slidesToScroll: 1,
                 asNavFor: `.gallery__${cur}-selected`,
                 centerMode: true,
