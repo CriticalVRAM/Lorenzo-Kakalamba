@@ -41,19 +41,19 @@ $(document).ready(function () {
         $(`.gallery__${cur}-selected`).slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: false,
             fade: true,
             asNavFor: `.gallery__${cur}-view`,
-            adaptiveHeight: true
+            adaptiveHeight: true,
+            prevArrow: '<a class="gallery__prev"><svg class="gallery__icon"><use xlink:href="img/sprite.svg#icon-chevron-left"></use></svg></a>',
+            nextArrow: '<a class="gallery__next"><svg class="gallery__icon"><use xlink:href="img/sprite.svg#icon-chevron-right"></use></svg></a>',
         })
         $(`.gallery__${cur}-view`).slick({
-            slidesToShow: 5,
+            slidesToShow: 4,
             slidesToScroll: 1,
             asNavFor: `.gallery__${cur}-selected`,
             centerMode: true,
             focusOnSelect: true,
-            prevArrow: '<a class="gallery__prev"><svg class="gallery__icon"><use xlink:href="img/sprite.svg#icon-chevron-left"></use></svg></a>',
-            nextArrow: '<a class="gallery__next"><svg class="gallery__icon"><use xlink:href="img/sprite.svg#icon-chevron-right"></use></svg></a>',
+            arrows: false,
         })
     }
 

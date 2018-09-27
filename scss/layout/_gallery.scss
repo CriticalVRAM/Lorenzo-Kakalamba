@@ -1,6 +1,6 @@
 .gallery {
     max-width: 100vw;
-    padding: 70rem 40rem;
+    padding: 70rem 40rem 20rem 40rem;
 
     background-image: linear-gradient(rgba($red,0.7), rgba($red,0.7)), url(../../img/hero.jpg);
     background-attachment: fixed;
@@ -43,13 +43,13 @@
 
     &__icon {
         fill: $red;
-        width: 130rem;
-        height: 130rem;
+        width: 120rem;
+        height: 120rem;
     }
     &__next {
         position: absolute;
         right: 0;
-        top: 0;
+        top: 40%;
         z-index: 10;
         cursor: pointer;
     }
@@ -57,7 +57,7 @@
         position: absolute;
         z-index: 10;
         left: 0;
-        top: 0;
+        top: 40%;
         cursor: pointer;
     }
 }
