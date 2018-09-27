@@ -27,10 +27,14 @@ $(document).ready(function () {
         `
         <div class="gallery__${cur}">
             <div class="gallery__${cur}-selected">
-                ${Array(35).join(0).split(0).map((item, i) => `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}" class="gallery__image">`).join('')}
+                
+            ${Array(33).join(0).split(0).map((item, i) => `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}">`).join('')}
+
             </div>
             <div class="gallery__${cur}-view">
-                ${Array(35).join(0).split(0).map((item, i) => `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}" class="gallery__image">`).join('')}
+                
+            ${Array(33).join(0).split(0).map((item, i) => `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}">`).join('')}
+
             </div>
         </div>
         `
@@ -43,10 +47,11 @@ $(document).ready(function () {
             slidesToScroll: 1,
             arrows: false,
             fade: true,
-            asNavFor: `.gallery__${cur}-view`
+            asNavFor: `.gallery__${cur}-view`,
+            adaptiveHeight: true
         })
         $(`.gallery__${cur}-view`).slick({
-            slidesToShow: 3,
+            slidesToShow: 5,
             slidesToScroll: 1,
             asNavFor: `.gallery__${cur}-selected`,
             centerMode: true,
@@ -69,18 +74,3 @@ $(document).ready(function () {
     }, true)
     activateGallery('interior')
 })
-
-// function createGallery(cur) {
-//     var galleryTemplate = 
-//     `
-//     <div class="gallery__${cur}">
-//         <div class="gallery__${cur}-selected">
-//             ${Array(35).join(0).split(0).map((item, i) => `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}" class="gallery__image">`).join('')}
-//         </div>
-//         <div class="gallery__${cur}-view">
-//             ${Array(35).join(0).split(0).map((item, i) => `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}" class="gallery__image">`).join('')}
-//         </div>
-//     </div>
-//     `
-//     document.getElementById(cur).innerHTML = galleryTemplate
-// }

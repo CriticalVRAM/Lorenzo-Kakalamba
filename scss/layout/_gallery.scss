@@ -4,7 +4,7 @@
     padding: 70rem 40rem;
 
     &__box {
-        max-width: 80%;
+        max-width: 70%;
         margin: 0 auto;
     }
     
@@ -28,6 +28,7 @@
             color: white;
         }
     }
+
     &__tab {
         transition: .3s;
         &:focus {
@@ -38,8 +39,8 @@
 
     &__icon {
         fill: $red;
-        width: 90rem;
-        height: 90rem;
+        width: 130rem;
+        height: 130rem;
     }
     &__next {
         position: absolute;
