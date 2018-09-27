@@ -27,14 +27,10 @@ $(document).ready(function () {
         `
         <div class="gallery__${cur}">
             <div class="gallery__${cur}-selected">
-                
-            ${Array(33).join(0).split(0).map((item, i) => `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}">`).join('')}
-
+                ${Array(33).join(0).split(0).map((item, i) => `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}">`).join('')}
             </div>
             <div class="gallery__${cur}-view">
-                
-            ${Array(33).join(0).split(0).map((item, i) => `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}">`).join('')}
-
+                ${Array(33).join(0).split(0).map((item, i) => `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}">`).join('')}
             </div>
         </div>
         `
@@ -72,5 +68,6 @@ $(document).ready(function () {
             activateGallery(event.target.innerHTML)
         }
     }, true)
+    activateGallery('interior')
     activateGallery('interior')
 })
