@@ -409,7 +409,46 @@
     </section>
 
     <section class="booking">
-
+        <form action="" class="booking__form">
+            <fieldset>
+                <legend>Info</legend>
+                <div>
+                    <label for="first-name">First name: <abbr title="required">*</abbr></label>
+                    <input id="first-name" type="text" name="first-name" required>
+                </div>
+                <div>
+                    <label for="last-name">Last name: <abbr title="required">*</abbr></label>
+                    <input id="last-name" type="text" name="last-name" required>
+                </div>
+                <div>
+                    <label for="last-name">Last name: <abbr title="required">*</abbr></label>
+                    <input id="last-name" type="text" name="last-name" required>
+                </div>
+                <div>
+                    <label for="phone">Phone: <abbr title="required">*</abbr></label>
+                    <input id="phone" type="tel" name="phone" required>
+                </div>
+                <div>
+                    <label for="email">Email: <abbr title="required">*</abbr></label>
+                    <input id="email" type="email" name="email" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Booking</legend>
+                <div>
+                    <label for="people">Number of people: <abbr title="required">*</abbr></label>
+                    <input id="people" type="number" name="people" min="1" max="100" required>
+                </div>
+                <div>
+                    <label for="date">Date of booking: <abbr title="required">*</abbr></label>
+                    <input id="date" type="date" name="date" required>
+                </div>
+                <div>
+                    <label for="time">Time of booking: <abbr title="required">*</abbr></label>
+                    <input id="time" type="time" name="time" min="12:00" max="24:00" required>
+                </div>
+            </fieldset>
+        </form>
     </section>
 
 
