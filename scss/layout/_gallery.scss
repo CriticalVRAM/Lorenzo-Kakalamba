@@ -42,9 +42,10 @@
     }
 
     &__icon {
-        fill: $red;
-        width: 120rem;
-        height: 120rem;
+        background-color: $red;
+        fill: white;
+        width: 90rem;
+        height: 90rem;
     }
     &__next {
         position: absolute;

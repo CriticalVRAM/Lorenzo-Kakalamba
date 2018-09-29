@@ -37,13 +37,13 @@
                         <use xlink:href="img/sprite.svg#icon-drink"></use>
                     </svg>
                 </a></li>
-            <li class="nav__item"><a href="#" class="nav__link">
+            <li class="nav__item"><a href="#gallery" class="nav__link">
                     <span>Gallery</span>
                     <svg class="nav__icon">
                         <use xlink:href="img/sprite.svg#icon-image"></use>
                     </svg>
                 </a></li>
-            <li class="nav__item"><a href="#" class="nav__link">
+            <li class="nav__item"><a href="#booking" class="nav__link">
                     <span>Booking</span>
                     <svg class="nav__icon">
                         <use xlink:href="img/sprite.svg#icon-check"></use>
@@ -389,7 +389,7 @@
         </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <div class="gallery__box">
             <ul class='gallery__tabs'>
                 <li><a href="#interior" class="gallery__tab">interior</a></li>
@@ -408,46 +408,55 @@
         </div>
     </section>
 
-    <section class="booking">
-        <form action="" class="booking__form">
-            <fieldset>
+    <section class="booking" id="booking">
+        <form class="booking__form">
+            <fieldset class="booking__area">
                 <legend>Info</legend>
-                <div>
-                    <label for="first-name">First name: <abbr title="required">*</abbr></label>
-                    <input id="first-name" type="text" name="first-name" required>
+                <div class="booking__item">
+                    <label class="booking__label" for="first-name">First name: <abbr title="required">*</abbr></label>
+                    <input class="booking__input" id="first-name" type="text" name="first-name" required>
                 </div>
-                <div>
-                    <label for="last-name">Last name: <abbr title="required">*</abbr></label>
-                    <input id="last-name" type="text" name="last-name" required>
+                <div class="booking__item">
+                    <label class="booking__label" for="last-name">Last name: <abbr title="required">*</abbr></label>
+                    <input class="booking__input" id="last-name" type="text" name="last-name" required>
                 </div>
-                <div>
-                    <label for="last-name">Last name: <abbr title="required">*</abbr></label>
-                    <input id="last-name" type="text" name="last-name" required>
+                <div class="booking__item">
+                    <label class="booking__label" for="phone">Phone: <abbr title="required">*</abbr></label>
+                    <input class="booking__input" id="phone" type="tel" name="phone" required>
                 </div>
-                <div>
-                    <label for="phone">Phone: <abbr title="required">*</abbr></label>
-                    <input id="phone" type="tel" name="phone" required>
-                </div>
-                <div>
-                    <label for="email">Email: <abbr title="required">*</abbr></label>
-                    <input id="email" type="email" name="email" required>
+                <div class="booking__item">
+                    <label class="booking__label" for="email">Email: <abbr title="required">*</abbr></label>
+                    <input class="booking__input" id="email" type="email" name="email" required>
                 </div>
             </fieldset>
-            <fieldset>
+
+            <fieldset class="booking__area">
                 <legend>Booking</legend>
-                <div>
-                    <label for="people">Number of people: <abbr title="required">*</abbr></label>
-                    <input id="people" type="number" name="people" min="1" max="100" required>
+                <div class="booking__item">
+                    <label class="booking__label" for="people">Number of people: <abbr title="required">*</abbr></label>
+                    <input class="booking__input" id="people" type="number" name="people" min="1" max="100" required>
                 </div>
-                <div>
-                    <label for="date">Date of booking: <abbr title="required">*</abbr></label>
-                    <input id="date" type="date" name="date" required>
+                <div class="booking__item">
+                    <label class="booking__label" for="date">Date of booking: <abbr title="required">*</abbr></label>
+                    <input class="booking__input" id="date" type="date" name="date" required>
                 </div>
-                <div>
-                    <label for="time">Time of booking: <abbr title="required">*</abbr></label>
-                    <input id="time" type="time" name="time" min="12:00" max="24:00" required>
+                <div class="booking__item">
+                    <label class="booking__label" for="time">Time of booking: <abbr title="required">*</abbr></label>
+                    <input class="booking__input" id="time" type="time" name="time" min="12:00" max="24:00" required>
+                </div>
+                <div class="booking__item">
+                    <label class="booking__label" for="smoke"><span>Smoking area: <abbr title="required">*</abbr></span></label>
+                    <select id="smoke" name="smoke">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="booking__item">
+                    <label class="booking__label" for="remark"><span>Remark: </span></label>
+                    <textarea class="booking__textarea" placeholder="Write something" id="remark"></textarea>
                 </div>
             </fieldset>
+            <button class="booking__btn" type="submit">Book</button>
         </form>
     </section>
 

@@ -1,3 +1,55 @@
 .booking {
-    background-color: green;
+    background-color: $red-dark;
+    padding: 80rem 0;
+
+    &__form {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-row-gap: 20rem;
+    }
+
+    &__area {
+        display: grid;
+        grid-gap: 10rem;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__label {
+        font-size: 24rem;
+    }
+
+    &__input {
+        padding: 5rem;
+        border-radius: 10px;
+        outline: none;
+        box-shadow: 0;
+        border: none;
+        border-bottom: 5px solid $green;
+        &:invalid {
+            border-bottom: 5px solid $red;
+        }
+    }
+
+    &__btn {
+        margin-top: 30rem;
+        border-radius: 100px;
+        font-size: 40rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        padding: 10px;
+        width: 15%;
+        outline: none;
+        background-color: red;
+        border: 0;
+        cursor: pointer;
+        transition: .3s;
+        &:hover {
+            background-color: $red-light;
+        }
+    }
 }
