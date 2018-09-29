@@ -30,6 +30,7 @@
         box-shadow: 0;
         border: none;
         border-bottom: 5px solid $green;
+        transition: .3s;
         &:invalid {
             border-bottom: 5px solid $red;
         }
@@ -37,19 +38,27 @@
 
     &__btn {
         margin-top: 30rem;
-        border-radius: 100px;
+        padding: 10px;
+        width: 15%;
+
+        outline: none;
         font-size: 40rem;
         font-weight: 300;
         text-transform: uppercase;
-        padding: 10px;
-        width: 15%;
-        outline: none;
+        color: white;
         background-color: red;
         border: 0;
-        cursor: pointer;
+        border-radius: 100px;
         transition: .3s;
+        cursor: pointer;
         &:hover {
             background-color: $red-light;
         }
+    }
+
+    .booking-heading {
+        font-size: 60rem;
+        border-bottom: 5px solid $red;
+        color: white;
     }
 }
