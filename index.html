@@ -49,7 +49,7 @@
                         <use xlink:href="img/sprite.svg#icon-check"></use>
                     </svg>
                 </a></li>
-            <li class="nav__item"><a href="#" class="nav__link">
+            <li class="nav__item"><a href="#contact" class="nav__link">
                     <span>Contact</span>
                     <svg class="nav__icon">
                         <use xlink:href="img/sprite.svg#icon-info"></use>
@@ -57,7 +57,6 @@
                 </a></li>
         </ul>
     </nav>
-
 
     <header class="header">
 
@@ -75,7 +74,6 @@
         </div>
 
     </header>
-
 
     <section class="about" id="about">
 
@@ -389,6 +387,10 @@
         </div>
     </section>
 
+    <section class="wine">
+
+    </section>
+
     <section class="gallery" id="gallery">
         <div class="gallery__box">
             <ul class='gallery__tabs'>
@@ -462,7 +464,7 @@
         </form>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="contact__box">
             <div class="contact__info">
                 <p class="contact__item">Cvijićeva 110 (entrance from Vladetina)</p>
@@ -481,13 +483,42 @@
         <div class="contact__map"></div>
     </section>
 
+    <footer class="footer">
+        <div class="footer__nav">
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="footer__link">About</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Menu</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Wine list</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Gallery</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Booking</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Job</a></li>
+            </ul>
+        </div>
+        <img src="img/lik1.png" alt="mascot 1" class="footer__logo">
+        <div class="footer__newsletter">
+            <form action="" class="footer__form">
+                <p class="footer__news-header">Subscribe to our newsletter</p>
+                <input type="email" class="footer__input footer__input--email" placeholder="email*" required>
+                <div class="footer__name-box">
+                    <input type="text" class="footer__input" placeholder="first name">
+                    <input type="text" class="footer__input" placeholder="last name">
+                </div>
+                <button class="footer__btn" type="submit">Send</button>
+            </form>
+        </div>
+        <p class="footer__copy">&copy; 2018 Uroš Radulović All Rights Reserved</p>
+    </footer>
+
+
+
     <!--
      TODO(hardnes):
         Make fully responsive,
         make nav stiky,
         make special images clickable,
-        make the element tabs you know,
-        find alternative to google maps,
+        make the element tabs functional,
+        find alternative to google maps or pay,
         make a contact and footer,
         make a wine list and fill it up,
         fill up gallery and menu,
