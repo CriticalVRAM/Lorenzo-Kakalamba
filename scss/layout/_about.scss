@@ -10,7 +10,10 @@
     justify-content: center;
 
     padding: 120rem 30rem 120rem 30rem;
-    background-color: $red;
+    background-image: linear-gradient(rgba($red,0.95), rgba($red,0.95)), url(/img/background2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
 
     &__click {

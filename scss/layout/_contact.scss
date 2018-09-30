@@ -1,0 +1,31 @@
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 80rem;
+
+    background-image: linear-gradient(rgba($red,0.9), rgba($red,0.9)), url(/img/background3.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    
+    &__box {
+        display: grid;
+        justify-items: start;
+    }
+
+    &__item {
+        font-size: 24rem;
+        margin-bottom: 5rem;
+    }
+
+    &__hours {
+        margin-top: 20rem;
+        border-top: 3px solid $red-light;
+    }
+
+    &__map {
+        width: 100%;
+        height: 400rem;
+    }
+}

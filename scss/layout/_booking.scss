@@ -1,6 +1,6 @@
 .booking {
-    background-color: $red-dark;
     padding: 80rem 0;
+    background-color: $red-dark;
 
     &__form {
         display: grid;
@@ -46,13 +46,14 @@
         font-weight: 300;
         text-transform: uppercase;
         color: white;
-        background-color: red;
-        border: 0;
+        background-color: $red;
+        border: 3px $red-light solid;
         border-radius: 100px;
         transition: .3s;
         cursor: pointer;
         &:hover {
-            background-color: $red-light;
+            border: 3px $red solid;
+            transform: scale(1.05);
         }
     }
 
