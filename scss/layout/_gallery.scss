@@ -1,6 +1,6 @@
 .gallery {
     max-width: 100vw;
-    padding: 70rem 40rem 20rem 40rem;
+    padding: 70rem 40rem 70rem 40rem;
 
     background-image: linear-gradient(rgba($red,0.7), rgba($red,0.7)), url(/img/hero.jpg);
     background-attachment: fixed;
@@ -41,6 +41,10 @@
         }
     }
 
+    .slick-slide div {
+        margin: 10rem 10rem;
+    }
+
     &__icon {
         background-color: $red;
         fill: white;
@@ -49,7 +53,7 @@
     }
     &__next {
         position: absolute;
-        right: 0;
+        right: -1px;
         top: 40%;
         z-index: 10;
         cursor: pointer;
