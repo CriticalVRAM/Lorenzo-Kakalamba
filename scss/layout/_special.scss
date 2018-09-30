@@ -10,6 +10,7 @@
         grid-gap: 10rem;
 
         span {
+            color: white;
             display: none;
             position: absolute;
             width: 100%;
@@ -22,7 +23,7 @@
             background-color: $red;
             border-radius: 3px;
             font-style: italic;
-            font-size: 15rem;
+            font-size: 14.5rem;
             text-align: center;
         }
     }
@@ -61,4 +62,8 @@
         width: 100%;
         transition: .5s;
     }
+}
+
+.lb-data .lb-details .lb-caption {
+    font-size: 13rem;
 }

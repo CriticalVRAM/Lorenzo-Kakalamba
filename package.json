@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Nani-Sore-0/Lorenzo#readme",
   "dependencies": {
-    "animate.css": "^3.7.0"
+    "animate.css": "^3.7.0",
+    "lightbox2": "^2.10.0"
   }
 }
