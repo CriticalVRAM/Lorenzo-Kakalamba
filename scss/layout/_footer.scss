@@ -5,23 +5,16 @@
     grid-column-gap: 30rem;
     grid-row-gap: 10rem;
 
-    padding: 80rem 40rem 20rem 40rem;
+    padding: 60rem 40rem 20rem 40rem;
     background-color: #212121;
 
 
-    &__logo {
-        width: 100%;
-        height: auto;
-        justify-self: center;
-        align-self: center;
-    }
-
     &__list {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(80px, min-content));
-        justify-items: center;
-        justify-content: space-around;
-
+        grid-template-columns: repeat(auto-fit, minmax(max-content, 0rem));
+        justify-content: start;
+        grid-gap: 20rem;
+        
         list-style: none;
     }
     &__item {
@@ -36,12 +29,25 @@
             }
         }
     }
-
     &__nav {
         display: grid;
         align-items: center;
+        grid-template-rows: 1fr 1fr;
     }
-
+    &__social {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(35rem, min-content));
+        grid-gap: 20rem;
+        align-self: end;
+        
+        list-style: none;
+        justify-content: start;
+    }
+    &__icon {
+        width: 35rem;
+        height: 35rem;
+    }
+    
     &__newsletter {
         width: 100%;
         height: 100%;
@@ -107,5 +113,49 @@
         text-transform: uppercase;
         border-bottom: 3px solid $red;
         justify-self: center;
+    }
+    &__logo {
+        width: 100%;
+        height: auto;
+        justify-self: center;
+        align-self: center;
+    }
+
+
+    //Social media colors
+    .facebook {
+        transition: .3s;
+        fill: #3b5998;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    .twitter {
+        transition: .3s;
+        fill: #55acee;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    .instagram {
+        transition: .3s;
+        fill: #517fa4;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    .tripadvisor {
+        transition: .3s;
+        fill: #00AF87;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    .foursquare {
+        transition: .3s;
+        fill: #F94877;
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 }
