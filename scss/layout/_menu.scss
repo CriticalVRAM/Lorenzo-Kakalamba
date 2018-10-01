@@ -1,10 +1,11 @@
 .menu {
     max-width: 100vw;
-    padding: 60rem 30rem 30rem 30rem;
+    padding: 30rem 30rem 30rem 30rem;
 
-    display: flex;
+    display: grid;
     align-items: center;
     justify-items: center;
+    grid-row-gap: 30rem;
 
     background-color: $red-dark;
 
@@ -67,5 +68,11 @@
     &__desc {
         font-size: 16rem;
         font-style: italic;
+    }
+
+    &__heading {
+        color: white;
+        font-size: 50rem;
+        text-align: center;
     }
 }
