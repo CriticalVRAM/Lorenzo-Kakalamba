@@ -71,9 +71,14 @@ $(document).ready(function () {
     activateGallery('interior')
     activateGallery('interior')
 
-    function intiMap() {
-        var uluru = {lat: -25.344, lng: 131.036}
-        var map = new google.maps.Map(document.querySelector('.contact__map'), {zoom: 4, center: uluru})
-        var marker = new google.maps.Marker({position: uluru, map: map})
+
+    document.querySelector('.gallery__tabs').addEventListener('click', changeTab, true)
+    document.querySelector('.menu__tabs').addEventListener('click', changeTab, true)
+
+    function changeTab(event) {
+        if (event.target.className === 'gallery__tab' || event.target.className === 'menu__tab') {
+            $(`.${event.currentTarget.className} li .activeTabView`).removeClass('activeTabView')
+            $(event.target).addClass('activeTabView')
+        }
     }
 })

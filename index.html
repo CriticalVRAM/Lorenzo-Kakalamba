@@ -124,17 +124,17 @@
     </section>
 
     <section class="menu" id="menu">
-        <div class='menu__box'>
-            <ul class='menu__tabs'>
-                <li><a class="menu__tab-btn" href="#tab-1">COLD APPETIZERS</a></li>
-                <li><a class="menu__tab-btn" href="#tab-2">HOT APPETIZERS</a></li>
-                <li><a class="menu__tab-btn" href="#tab-3">SALADS</a></li>
-                <li><a class="menu__tab-btn" href="#tab-4">SOUPS / BROTHS</a></li>
-                <li><a class="menu__tab-btn" href="#tab-5">PASTA / RISOTTO</a></li>
-                <li><a class="menu__tab-btn" href="#tab-6">DAILY MEALS</a></li>
-                <li><a class="menu__tab-btn" href="#tab-7">MAIN COURSE</a></li>
+        <div class="menu__box">
+            <ul class="menu__tabs">
+                <li><a class="menu__tab activeTabView" href="#tab-1">COLD APPETIZERS</a></li>
+                <li><a class="menu__tab" href="#tab-2">HOT APPETIZERS</a></li>
+                <li><a class="menu__tab" href="#tab-3">SALADS</a></li>
+                <li><a class="menu__tab" href="#tab-4">SOUPS / BROTHS</a></li>
+                <li><a class="menu__tab" href="#tab-5">PASTA / RISOTTO</a></li>
+                <li><a class="menu__tab" href="#tab-6">DAILY MEALS</a></li>
+                <li><a class="menu__tab" href="#tab-7">MAIN COURSE</a></li>
                 <li>
-                    <a class="menu__tab-btn" href="#tab-8">
+                    <a class="menu__tab" href="#tab-8">
                         <svg class="menu__icon">
                             <use xlink:href="img/sprite.svg#icon-star"></use>
                         </svg>
@@ -144,16 +144,16 @@
                         </svg>
                     </a>
                 </li>
-                <li><a class="menu__tab-btn" href="#tab-9">DRY AGED STEAKS - <span>from our cabinets (30 days)</span></a></li>
-                <li><a class="menu__tab-btn" href="#tab-10">ROAST MEAT</a></li>
-                <li><a class="menu__tab-btn" href="#tab-11">SAUCE OF CHOICE</a></li>
-                <li><a class="menu__tab-btn" href="#tab-12">SIDE DISHES</a></li>
-                <li><a class="menu__tab-btn" href="#tab-13">SALADS - <span>with the dish</span></a></li>
-                <li><a class="menu__tab-btn" href="#tab-14">PIZZA</a></li>
-                <li><a class="menu__tab-btn" href="#tab-15">KID’S MENU</a></li>
-                <li><a class="menu__tab-btn" href="#tab-16">SIKTER DISH - DESSERTS</a></li>
+                <li><a class="menu__tab" href="#tab-9">DRY AGED STEAKS - <span>from our cabinets (30 days)</span></a></li>
+                <li><a class="menu__tab" href="#tab-10">ROAST MEAT</a></li>
+                <li><a class="menu__tab" href="#tab-11">SAUCE OF CHOICE</a></li>
+                <li><a class="menu__tab" href="#tab-12">SIDE DISHES</a></li>
+                <li><a class="menu__tab" href="#tab-13">SALADS - <span>with the dish</span></a></li>
+                <li><a class="menu__tab" href="#tab-14">PIZZA</a></li>
+                <li><a class="menu__tab" href="#tab-15">KID’S MENU</a></li>
+                <li><a class="menu__tab" href="#tab-16">SIKTER DISH - DESSERTS</a></li>
             </ul>
-            <div id='tab-1'>
+            <div id="tab-1">
                 <ul class="menu__list">
                     <li class="menu__item">
                         <h5 class="heading5 mb-tiny">KAKALAMBA APPETIZER | for 2 people</h5>
@@ -241,7 +241,7 @@
                 </ul>
             </div>
 
-            <div id='tab-2'>
+            <div id="tab-2">
                 <ul class="menu__list">
                     <li class="menu__item">
                         <h5 class="heading5">BREADED AND BAKED RED PEPPERS FILLED WITH RUBBED SALAD</h5>
@@ -281,7 +281,7 @@
                 </ul>
             </div>
 
-            <div id='tab-3'>
+            <div id="tab-3">
                 <ul class="menu__list">
                     <li class="menu__item">
                         <h5 class="heading5">KAKALAMBA APPETIZER | for 2 people</h5>
@@ -487,20 +487,20 @@
 
     <section class="gallery" id="gallery">
         <div class="gallery__box">
-            <ul class='gallery__tabs'>
-                <li><a href="#interior" class="gallery__tab">interior</a></li>
+            <ul class="gallery__tabs">
+                <li><a href="#interior" class="activeTabView gallery__tab">interior</a></li>
                 <li><a href="#garden" class="gallery__tab">garden</a></li>
                 <li><a href="#details" class="gallery__tab">details</a></li>
                 <li><a href="#events" class="gallery__tab">events</a></li>
                 <li><a href="#food" class="gallery__tab">food</a></li>
                 <li><a href="#deserts" class="gallery__tab">deserts</a></li>
             </ul>
-            <div id='interior' class="gallery__section"></div>
-            <div id='garden' class="gallery__section"></div>
-            <div id='details' class="gallery__section"></div>
-            <div id='events' class="gallery__section"></div>
-            <div id='food' class="gallery__section"></div>
-            <div id='deserts' class="gallery__section"></div>
+            <div id="interior" class="gallery__section"></div>
+            <div id="garden" class="gallery__section"></div>
+            <div id="details" class="gallery__section"></div>
+            <div id="events" class="gallery__section"></div>
+            <div id="food" class="gallery__section"></div>
+            <div id="deserts" class="gallery__section"></div>
         </div>
     </section>
 
@@ -574,7 +574,7 @@
                 <p class="contact__item">Friday and Saturday from 12 to 01h.</p>
             </div>
         </div>
-        <div class="contact__map"></div>
+        <div class="contact__map"><img src="../img/map.PNG" alt="map"></div>
     </section>
 
     <footer class="footer">
@@ -609,13 +609,16 @@
     <!--
      TODO(hardnes):
         Make fully responsive (last),
+        lang bar (holy shit),
+        job form,
+        fuking ordering,
         make nav stiky,
         make the element tabs functional,
-        find alternative to google maps or pay,
+        find alternative to google maps,
         make a wine list and fill it up,
         fill up gallery and menu,
-        optimize images and preformance,
-        fix url problem.
+        fix time bug,
+        optimize images and preformance (but like legit last).
     -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -623,7 +626,6 @@
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/jquery.tabslet.min.js"></script>
-    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeP1s4AzMCKBcQ37j_aX7myF64j4AV6JQ&callback=initMap"></script> -->
     <script src="node_modules/lightbox2/dist/js/lightbox.min.js"></script>
     <script src="js/index.js"></script>
 

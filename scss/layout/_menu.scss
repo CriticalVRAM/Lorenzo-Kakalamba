@@ -35,12 +35,8 @@
         }
     }
 
-    &__tab-btn {
+    &__tab {
         transition: .3s;
-        &:focus {
-            border-bottom: 5px solid $red-light;
-            font-size: 28rem;
-        }
     }
 
     &__icon {

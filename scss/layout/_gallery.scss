@@ -35,10 +35,6 @@
 
     &__tab {
         transition: .3s;
-        &:focus {
-            border-bottom: 5px solid $red-light;
-            font-size: 34rem;
-        }
     }
 
     .slick-slide div {

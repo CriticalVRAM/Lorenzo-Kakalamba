@@ -13,3 +13,7 @@ html {
 body {
     box-sizing: border-box;
 }
+
+.activeTabView {
+    border-bottom: 3px solid $red-light;
+}
