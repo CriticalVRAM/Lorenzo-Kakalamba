@@ -15,5 +15,6 @@ body {
 }
 
 .activeTabView {
-    border-bottom: 3px solid $red-light;
+    transition: .5s;
+    border-bottom: 5rem solid $red-light;
 }

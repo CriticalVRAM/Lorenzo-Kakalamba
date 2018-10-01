@@ -9,7 +9,6 @@ $(document).ready(function () {
         autoplay: true,
         arrows: false
     })
-
     $('.menu__box').tabslet({
         animation: true,
     })
@@ -21,7 +20,6 @@ $(document).ready(function () {
     function clearGallery(cur) {
         document.getElementById(cur).innerHTML = ''
     }
-
     function createGallery(cur) {
         var galleryTemplate = 
         `
@@ -36,7 +34,6 @@ $(document).ready(function () {
         `
         document.getElementById(cur).innerHTML = galleryTemplate
     }
-
     function showImages(cur) {
         $(`.gallery__${cur}-selected`).slick({
             slidesToShow: 1,
@@ -56,7 +53,6 @@ $(document).ready(function () {
             arrows: false,
         })
     }
-
     function activateGallery(cur) {
         clearGallery(cur)
         createGallery(cur)
@@ -74,7 +70,6 @@ $(document).ready(function () {
 
     document.querySelector('.gallery__tabs').addEventListener('click', changeTab, true)
     document.querySelector('.menu__tabs').addEventListener('click', changeTab, true)
-
     function changeTab(event) {
         if (event.target.className === 'gallery__tab' || event.target.className === 'menu__tab') {
             $(`.${event.currentTarget.className} li .activeTabView`).removeClass('activeTabView')
