@@ -21,14 +21,37 @@ $(document).ready(function () {
         document.getElementById(cur).innerHTML = ''
     }
     function createGallery(cur) {
+        // how many imags (hard-coded)
+        var imgNum
+        switch (cur) {
+            case 'interior':
+                imgNum = 33
+                break;
+            case 'garden':
+                imgNum = 16
+                break;
+            case 'events':
+                imgNum = 77
+                break;
+            case 'food':
+                imgNum = 16
+                break;
+            case 'deserts':
+                imgNum = 16
+                break;
+            case 'details':
+                imgNum = 16
+                break;
+        }
+
         var galleryTemplate = 
         `
         <div class="gallery__${cur}">
             <div class="gallery__${cur}-selected">
-                ${Array(33).join(0).split(0).map((item, i) => `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}">`).join('')}
+                ${Array(imgNum).join(0).split(0).map((item, i) => `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}">`).join('')}
             </div>
             <div class="gallery__${cur}-view">
-                ${Array(33).join(0).split(0).map((item, i) => `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}">`).join('')}
+                ${Array(imgNum).join(0).split(0).map((item, i) => `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}">`).join('')}
             </div>
         </div>
         `
@@ -58,13 +81,15 @@ $(document).ready(function () {
         createGallery(cur)
         showImages(cur)
     }
+    var posible = ['interior', 'garden', 'events', 'food', 'deserts', 'details']
     document.querySelector('.gallery__box').addEventListener('click', event => {
-        var posible = ['interior', 'garden', 'events', 'food', 'deserts', 'details']
         if (posible.includes(event.target.innerHTML)) {
             activateGallery(event.target.innerHTML)
         }
     }, true)
-    activateGallery('interior')
+
+    //fix gallrey bug
+    posible.forEach(cur => activateGallery(cur))
     activateGallery('interior')
 
 
