@@ -34,13 +34,13 @@ $(document).ready(function () {
                 imgNum = 77
                 break;
             case 'food':
-                imgNum = 16
+                imgNum = 41
                 break;
             case 'deserts':
-                imgNum = 16
+                imgNum = 14
                 break;
             case 'details':
-                imgNum = 16
+                imgNum = 28
                 break;
         }
 

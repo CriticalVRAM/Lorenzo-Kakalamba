@@ -29,10 +29,10 @@
         outline: none;
         box-shadow: 0;
         border: none;
-        border-bottom: 5px solid $green;
+        border-bottom: 7px solid $green;
         transition: .3s;
         &:invalid {
-            border-bottom: 5px solid $red;
+            border-bottom: 7px solid $red;
         }
     }
 
