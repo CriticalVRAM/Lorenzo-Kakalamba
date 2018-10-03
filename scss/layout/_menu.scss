@@ -9,14 +9,19 @@
 
     background-color: $red-dark;
 
+
+    &__box {
+        width: 100%;
+    }
+
     &__tabs {
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        grid-template-rows: 1fr 1fr;
-        grid-row-gap: 20rem;
+        grid-template-columns: repeat(auto-fill, minmax(min-content, 150rem));
+        grid-auto-rows: minmax(min-content, 55.5rem);
 
         align-items: center;
         justify-items: center;
+        justify-content: space-evenly;
         text-align: center;
 
         margin-bottom: 20rem;
@@ -24,12 +29,14 @@
         padding: 20rem;
         border-radius: 4px;
         font-family: $font-heading;
-        font-size: 24rem;
+        font-size: 22rem;
         list-style: none;
 
-        li a {
-            text-decoration: none;
-            color: white;
+        li {
+            a {
+                text-decoration: none;
+                color: white;
+            }
             span {
                 font-size: 16rem;
             }
