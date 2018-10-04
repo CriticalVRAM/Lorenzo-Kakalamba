@@ -1,3 +1,99 @@
 .wine {
-    
+    max-width: 100vw;
+    padding: 30rem 30rem 30rem 30rem;
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-row-gap: 30rem;
+
+    background-color: $red-dark;
+
+
+    &__box {
+        width: 100%;
+    }
+
+    &__tabs {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min-content, 150rem));
+        grid-auto-rows: minmax(min-content, 55.5rem);
+
+        align-items: center;
+        justify-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+
+        margin-bottom: 20rem;
+        background-color: $red;
+        padding: 20rem;
+        border-radius: 4px;
+        font-family: $font-heading;
+        font-size: 22rem;
+        list-style: none;
+
+        li {
+            a {
+                text-decoration: none;
+                color: white;
+            }
+            span {
+                font-size: 16rem;
+            }
+        }
+    }
+
+    &__icon {
+        fill: white;
+        width: 22rem;
+        height: 22rem;
+        display: inline-block;
+    }
+
+    &__list {
+        list-style: none;
+    }
+    &__item {
+        display: grid;
+        grid-template-rows: min-content min-content;
+        grid-template-columns: 1fr max-content;
+        
+        margin-bottom: 10rem;
+        background-color: $red;
+        padding: 10rem;
+        border-radius: 4px;
+    }
+    &__price {
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        align-self: center;
+
+        font-family: $font-heading;
+        font-size: 30rem;
+    }
+
+    &__desc {
+        font-size: 14rem;
+        font-style: italic;
+    }
+
+    &__heading {
+        color: white;
+        font-size: 50rem;
+        text-align: center;
+    }
+
+    &__class {
+        margin-bottom: 10rem;
+        background-color: $red;
+        padding: 5rem;
+        border-radius: 4px;
+        border-bottom: 5px solid $red-light;
+        border-top: 5px solid $red-light;
+    }
+
+    &__class-name {
+        text-align: center;
+        font-size: 26rem;
+    }
 }
