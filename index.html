@@ -17,49 +17,23 @@
 </head>
 
 <body>
-    <nav class="nav" data-aos="fade-down">
+    <nav class="nav">
         <ul class="nav__list">
-            <img src="img/logo1.png" alt="Navigation logo" class="nav__logo">
-            <li class="nav__item"><a href="#about" class="nav__link">
-                    <span>About Us</span>
-                    <svg class="nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-star"></use>
-                    </svg>
-                </a></li>
-            <li class="nav__item"><a href="#menu" class="nav__link">
-                    <span>Menu</span>
-                    <svg class="nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-open-book"></use>
-                    </svg>
-                </a></li>
-            <li class="nav__item"><a href="#" class="nav__link">
-                    <span>Wine list</span>
-                    <svg class="nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-drink"></use>
-                    </svg>
-                </a></li>
-            <li class="nav__item"><a href="#gallery" class="nav__link">
-                    <span>Gallery</span>
-                    <svg class="nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-image"></use>
-                    </svg>
-                </a></li>
-            <li class="nav__item"><a href="#booking" class="nav__link">
-                    <span>Booking</span>
-                    <svg class="nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-check"></use>
-                    </svg>
-                </a></li>
-            <li class="nav__item"><a href="#contact" class="nav__link">
-                    <span>Contact</span>
-                    <svg class="nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-info"></use>
-                    </svg>
-                </a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About us</a></li>
+            <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
+            <li class="nav__item"><a href="#specials" class="nav__link">Our specials</a></li>
+            <li class="nav__item"><a href="#wine" class="nav__link">Wine list</a></li>
+            <li class="nav__item"><a href="#gallery" class="nav__link">Gallery</a></li>
+            <img class="nav__icon" src="img/lik2.png" alt="nav icon">
+            <li class="nav__item"><a href="#booking" class="nav__link">Booking</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            <li class="nav__item"><a href="#" class="nav__link external">Ordering</a></li>
+            <li class="nav__item"><a href="#" class="nav__link external">Jobs</a></li>
+            <li class="nav__item"><a href="#" class="nav__link external">Change language</a></li>
         </ul>
     </nav>
 
-    <header class="header">
+    <header class="header" id="header">
 
         <div class="header__container">
             <h1 class="heading1" data-aos="fade-left">Premium Italian Food</h1>
@@ -298,7 +272,7 @@
         </div>
     </section>
 
-    <section class="special">
+    <section class="special" id="specials">
         <h4 class="heading4 special__heading">Our specials</h4>
         <p class="special__info">Click or tap to learn more</p>
         <div class="special__box">
@@ -439,7 +413,7 @@
         </div>
     </section>
 
-    <section class="wine">
+    <section class="wine" id="wine">
         <h4 class="heading4 wine__heading">Wine</h4>
         <div class="wine__box">
             <ul class="wine__tabs">
@@ -817,10 +791,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/jquery.tabslet.min.js"></script>
     <script src="node_modules/lightbox2/dist/js/lightbox.min.js"></script>
+    <script src="js/jquery.onepagenav.js"></script>
     <script src="js/index.js"></script>
 
 

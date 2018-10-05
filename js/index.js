@@ -1,9 +1,7 @@
 $(document).ready(function () {
-    var scroll = new SmoothScroll('a[href*="#"]')
     AOS.init({
         duration: 1200,
     })
-
 
     $('.about__slideshow').slick({
         autoplay: true,
@@ -18,7 +16,6 @@ $(document).ready(function () {
     $('.wine__box').tabslet({
         animation: true,
     })
-
 
     function clearGallery(cur) {
         document.getElementById(cur).innerHTML = ''
@@ -96,13 +93,28 @@ $(document).ready(function () {
     activateGallery('interior')
 
 
-    document.querySelector('.gallery__tabs').addEventListener('click', changeTab, true)
-    document.querySelector('.menu__tabs').addEventListener('click', changeTab, true)
-    document.querySelector('.wine__tabs').addEventListener('click', changeTab, true)
+    var tabsAnimation = ['.gallery__tabs', '.menu__tabs', '.wine__tabs']
+    tabsAnimation.forEach(cur => document.querySelector(cur).addEventListener('click', changeTab, true))
     function changeTab(event) {
         if (event.target.className === 'gallery__tab' || event.target.className === 'menu__tab' || event.target.className === 'wine__tab') {
             $(`.${event.currentTarget.className} li .activeTabView`).removeClass('activeTabView')
             $(event.target).addClass('activeTabView')
         }
+    }
+
+
+    $('.nav').onePageNav({
+        currentClass: 'nav__current',
+        changeHash: false,
+        scrollSpeed: 750,
+        filter: ':not(.external)',
+    })
+
+    document.querySelector('.nav__icon').addEventListener('click', scrollTop, true)
+    function scrollTop(event) {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600)
+        return false
     }
 })

@@ -1,63 +1,34 @@
 .nav {
-    position: absolute;
+    position: fixed;
+    width: 100%;
     top: 0;
+    z-index: 100;
+
     padding: 10rem;
 
-    &__logo{
-        width: 100%;
-        height: auto;
-        grid-column: 4 / 5;
-
-        background-image: url(img/cloud.png);
-        background-position: center;
-        background-size: 80% 100%;
-        background-repeat: no-repeat;
-    }
-
+    background-color: #212121;
     &__list {
         display: grid;
-        grid-template-columns: repeat(3, max-content) 2fr repeat(3, max-content);
-        grid-auto-flow: dense;
+        grid-auto-flow: column;
+        grid-column-gap: 5rem;
         align-items: center;
         justify-items: center;
 
         list-style: none;
     }
-
-    &__item {
-        padding: 10rem;
-        // background-image: url(img/cloud.png);
-        // background-position: center;
-        // background-size: 100% 100%;
-        // background-repeat: no-repeat;
-    }
-
-    &__link:link,
-    &__link:visited {
-        display: flex;
-        align-items: center;
-        font-size: 25rem;
-        font-weight: 400;
-
+    &__link {
         text-decoration: none;
+        font-size: 24rem;
         color: $red;
-        padding: 20rem;
-        border-radius: 3px;
+        font-family: $font-heading;
+    }
+    &__current {
         transition: .3s;
+        border-bottom: 3px solid $red-light;
     }
-    &__link:hover {
-        transform: scale(1.1);
-    }
-
     &__icon {
-        width: 25rem;
-        height: 25rem;
-        fill: $red;
-        margin-left: 15rem;
-        transition: .3s;
-    }
-
-    &__link:hover &__icon {
-        transform: rotate(-10deg) scale(1.5);
+        width: 40rem;
+        height: auto;
+        cursor: pointer;
     }
 }
