@@ -11,16 +11,19 @@
 
     &__area {
         display: grid;
-        grid-gap: 10rem;
+        grid-row-gap: 10rem;
     }
 
     &__item {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        &--butt {
+            margin-bottom: 8rem;    
+        }
     }
 
     &__label {
-        font-size: 24rem;
+        font-size: 20rem;
     }
 
     &__input {
@@ -39,7 +42,7 @@
     &__btn {
         margin-top: 30rem;
         padding: 10px;
-        width: 15%;
+        width: 170rem;
 
         outline: none;
         font-size: 40rem;

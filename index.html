@@ -647,7 +647,6 @@
             <h4 class="heading4 booking-heading mb-medium">Booking</h4>
             <p class="booking__note">EACH BOOK IS VALID ONLY IF IT IS CONFIRMED BY THE RESTAURANT!</p>
             <fieldset class="booking__area">
-                <legend>Info</legend>
                 <div class="booking__item">
                     <label class="booking__label" for="first-name">First name: <abbr title="required">*</abbr></label>
                     <input class="booking__input" id="first-name" type="text" name="first-name" required>
@@ -667,7 +666,6 @@
             </fieldset>
 
             <fieldset class="booking__area">
-                <legend>Booking</legend>
                 <div class="booking__item">
                     <label class="booking__label" for="people">Number of people: <abbr title="required">*</abbr></label>
                     <input class="booking__input" id="people" type="number" name="people" min="1" max="100" value="1" required>
@@ -676,7 +674,7 @@
                     <label class="booking__label" for="date">Date of booking: <abbr title="required">*</abbr></label>
                     <input class="booking__input" id="date" type="date" name="date" required>
                 </div>
-                <div class="booking__item">
+                <div class="booking__item booking__item--butt">
                     <label class="booking__label" for="time">Time of booking: <abbr title="required">*</abbr></label>
                     <select name="time" id="time" required>
                         <option value="12:00">12:00</option>
@@ -706,7 +704,7 @@
                         <option value="24:00">24:00</option>
                     </select>
                 </div>
-                <div class="booking__item">
+                <div class="booking__item booking__item--butt">
                     <label class="booking__label" for="smoke"><span>Smoking area: <abbr title="required">*</abbr></span></label>
                     <select id="smoke" name="smoke">
                         <option value="yes">Yes</option>
@@ -808,7 +806,6 @@
 
     <!--
     TODO:
-    make a wine list,
     make nav stiky prehaps rework it,
     job form,
     ordering,
