@@ -9,12 +9,21 @@
     background-color: #212121;
     &__list {
         display: grid;
-        grid-auto-flow: column;
         grid-column-gap: 5rem;
         align-items: center;
         justify-items: center;
+        grid-auto-flow: column;
 
         list-style: none;
+    }
+    &__item {
+        transition: .2s;
+        &:hover {
+            transform: scale(1.1);
+        }
+        &--head {
+            grid-column: 6 / 7;
+        }
     }
     &__link {
         text-decoration: none;
@@ -24,7 +33,7 @@
     }
     &__current {
         transition: .3s;
-        border-bottom: 3px solid $red-light;
+        border-bottom: 3rem solid $red-light;
     }
     &__icon {
         width: 40rem;

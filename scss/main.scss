@@ -4,23 +4,18 @@
 @import
   'abstracts/variables',
   'abstracts/functions',
-  'abstracts/mixins',
-  'abstracts/placeholders';
+  'abstracts/mixins';
 
-// 2. Vendors
-  //vendors imports here
-
-// 3. Base stuff
+// 2. Base stuff
 @import
   'base/base',
   'base/typography',
   'base/utilities',
   'base/normalize';
 
-// 4. Layout-related sections
+// 3. Layout-related sections
 @import
   'layout/header',
-  'layout/grid',
   'layout/footer',
   'layout/about',
   'layout/menu',
@@ -30,11 +25,6 @@
   'layout/contact',
   'layout/wine';
 
-// 5. Components
+// 4. Components
 @import
-  'componenets/buttons',
   'componenets/nav';
-
-// 6. Page-specific styles
-@import
-  'pages/home';

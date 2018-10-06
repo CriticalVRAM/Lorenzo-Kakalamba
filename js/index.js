@@ -1,6 +1,7 @@
 $(document).ready(function () {
+    new SmoothScroll('#arrow-down')
     AOS.init({
-        duration: 1200,
+        duration: 1000,
     })
 
     $('.about__slideshow').slick({
@@ -21,7 +22,7 @@ $(document).ready(function () {
         document.getElementById(cur).innerHTML = ''
     }
     function createGallery(cur) {
-        // how many imags (hard-coded)
+        // How many images in each section?
         var imgNum
         switch (cur) {
             case 'interior':
@@ -88,7 +89,7 @@ $(document).ready(function () {
         }
     }, true)
 
-    //fix gallrey bug
+    //Fix gallery bug
     posible.forEach(cur => activateGallery(cur))
     activateGallery('interior')
 
@@ -109,12 +110,4 @@ $(document).ready(function () {
         scrollSpeed: 750,
         filter: ':not(.external)',
     })
-
-    document.querySelector('.nav__icon').addEventListener('click', scrollTop, true)
-    function scrollTop(event) {
-        $("html, body").animate({
-            scrollTop: 0
-        }, 600)
-        return false
-    }
 })

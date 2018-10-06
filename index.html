@@ -18,14 +18,14 @@
 
 <body>
 
-    <nav class="nav">
+    <nav class="nav" data-aos="fade-down">
         <ul class="nav__list">
+            <li class="nav__item nav__item--head"><a href="#header"><img class="nav__icon" src="img/lik2.png" alt="nav icon"></a></li>
             <li class="nav__item"><a href="#about" class="nav__link">About us</a></li>
             <li class="nav__item"><a href="#menu" class="nav__link">Menu</a></li>
             <li class="nav__item"><a href="#specials" class="nav__link">Our specials</a></li>
             <li class="nav__item"><a href="#wine" class="nav__link">Wine list</a></li>
             <li class="nav__item"><a href="#gallery" class="nav__link">Gallery</a></li>
-            <img class="nav__icon" src="img/lik2.png" alt="nav icon">
             <li class="nav__item"><a href="#booking" class="nav__link">Booking</a></li>
             <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
             <li class="nav__item"><a href="#" class="nav__link external">Ordering</a></li>
@@ -41,7 +41,7 @@
             <h2 class="heading2 mb-huge" data-aos="fade-left">in a incredible ambience</h2>
             <div class="header__button" data-aos="fade-right">
                 <h3 class="heading3">Learn more</h3>
-                <a href="#about">
+                <a id="arrow-down" href="#about">
                     <svg class="header__icon animated fadeInDown delay-1s">
                         <use xlink:href="img/sprite.svg#icon-chevron-with-circle-down"></use>
                     </svg>
@@ -697,6 +697,7 @@
 
     <section class="contact" id="contact">
         <div class="contact__box">
+            <h4 class="contact__header heading4">Contact</h4>
             <div class="contact__info">
                 <p class="contact__item">Cvijićeva 110 (entrance from Vladetina)</p>
                 <p class="contact__item">11000 Belgrade</p>
@@ -795,6 +796,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/jquery.tabslet.min.js"></script>
     <script src="node_modules/lightbox2/dist/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="js/jquery.onepagenav.js"></script>
     <script src="js/index.js"></script>
 
