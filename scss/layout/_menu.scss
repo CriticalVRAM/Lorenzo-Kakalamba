@@ -8,6 +8,11 @@
     grid-row-gap: 30rem;
 
     background-color: $red-dark;
+    @include respond(phone) {
+        // Media query
+        padding: 20rem;
+        padding-top: 55rem;
+    }
 
 
     &__box {

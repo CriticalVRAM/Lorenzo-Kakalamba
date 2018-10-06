@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
     @include respond(tab-port) {
         // Media query
-        padding: 70rem 20rem 20rem 20rem;
+        padding: 55rem 20rem 20rem 20rem;
     }
 
     &__box {
@@ -16,7 +16,7 @@
         margin: 0 auto;
         @include respond(tab-land) {
             // Media query
-            max-width: 80%;
+            max-width: 90%;
         }
         @include respond(tab-port) {
             // Media query
@@ -58,6 +58,16 @@
         fill: white;
         width: 90rem;
         height: 90rem;
+        @include respond(tab-port) {
+            // Media query
+            width: 75rem;
+            height: 75rem;
+        }
+        @include respond(phone) {
+            // Media query
+            width: 50rem;
+            height: 50rem;
+        }
     }
     &__next {
         position: absolute;

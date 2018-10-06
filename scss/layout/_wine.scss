@@ -1,6 +1,11 @@
 .wine {
     max-width: 100vw;
     padding: 70rem 30rem 60rem 30rem;
+    @include respond(phone) {
+        // Media query
+        padding: 20rem;
+        padding-top: 55rem;
+    }
 
     display: grid;
     align-items: center;

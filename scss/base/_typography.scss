@@ -37,6 +37,10 @@ body {
     font-size: 62rem;
     text-transform: uppercase;
     font-weight: 300;
+    @include respond(phone) {
+        // Media query
+        font-size: 50rem;
+    }
 }
 
 .heading5 {

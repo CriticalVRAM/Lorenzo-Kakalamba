@@ -1,6 +1,12 @@
 .booking {
-    padding: 70rem 0;
+    padding: 70rem 10rem;
     background-color: $red-dark;
+    @include respond(phone) {
+        // Media query
+        padding-top: 55rem;
+        padding-bottom: 20rem;
+
+    }
 
     &__form {
         display: grid;
@@ -43,6 +49,11 @@
         margin-top: 30rem;
         padding: 10px;
         width: 170rem;
+        @include respond(phone) {
+            // Media query
+            width: 140rem;
+            font-size: 30rem;
+        }
 
         outline: none;
         font-size: 40rem;
@@ -62,6 +73,10 @@
 
     .booking-heading {
         color: white;
+        @include respond(tab-port) {
+            // Media query
+            margin-bottom: 0;
+        }
     }
 
     &__note {
