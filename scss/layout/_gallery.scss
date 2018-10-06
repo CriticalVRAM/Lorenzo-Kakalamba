@@ -6,10 +6,22 @@
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    @include respond(tab-port) {
+        // Media query
+        padding: 70rem 20rem 20rem 20rem;
+    }
 
     &__box {
         max-width: 55%;
         margin: 0 auto;
+        @include respond(tab-land) {
+            // Media query
+            max-width: 80%;
+        }
+        @include respond(tab-port) {
+            // Media query
+            max-width: 100%;
+        }
     }
     
     &__tabs {
@@ -23,6 +35,10 @@
         list-style: none;
         background-color: $red-dark;
         padding: 20rem;
+        @include respond(tab-port) {
+            // Media query
+            margin-bottom: 20rem;
+        }
 
         li a {
             font-size: 24rem;

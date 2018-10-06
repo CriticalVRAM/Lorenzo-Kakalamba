@@ -12,10 +12,14 @@ body {
 
 .heading1 {
     font-family: $font-heading;
-    font-size: 64rem;
+    font-size: 62rem;
     text-transform: uppercase;
     font-weight: 300;
     margin: 0;
+    @include respond(phone) {
+        // Media query
+        font-size: 56rem;
+    }
 
 }
 

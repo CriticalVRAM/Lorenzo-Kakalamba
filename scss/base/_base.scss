@@ -8,6 +8,10 @@
 
 html {
     font-size: 6.25%; // 1rem = 1px
+    @include respond(tab-land) {
+        // Media query
+        font-size: 5.5%;
+    }
 }
 
 body {

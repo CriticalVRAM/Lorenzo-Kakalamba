@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    new SmoothScroll('#arrow-down')
+    new SmoothScroll('.link-ani')
     AOS.init({
         duration: 1000,
     })
