@@ -3,7 +3,7 @@ $(document).ready(function () {
     AOS.init({duration: 1000})
 
     $('.about__slideshow').slick({
-        
+        autoplay: true,
         arrows: false
     })
     $('.menu__box').tabslet({
