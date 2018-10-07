@@ -30,6 +30,10 @@
 
     &__label {
         font-size: 20rem;
+        @include respond(phone) {
+            // Media query
+            font-size: 14rem;
+        }
     }
 
     &__input {
@@ -42,6 +46,11 @@
         transition: .3s;
         &:invalid {
             border-bottom: 7px solid $red;
+        }
+        font-size: 16rem;
+        @include respond(phone) {
+            // Media query
+            font-size: 14rem;
         }
     }
 

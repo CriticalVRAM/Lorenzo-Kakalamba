@@ -1,6 +1,6 @@
 .about {
     width: 100vw;
-    max-width: 100%;
+    max-width: 100vw;
 
     display: grid;
     grid-template-columns: 50% 1fr 1fr;
@@ -8,59 +8,68 @@
     grid-auto-flow: dense;
     grid-gap: 40rem;
     justify-content: center;
+    @include respond(tab-land) {
+        // Media query
+        grid-template-rows: min-content, 1fr, min-content min-content;
+        grid-template-columns: 100%;
+        grid-auto-flow: unset;
+
+        padding: 20rem;
+        padding-top: 55rem;
+    }
 
     padding: 120rem 30rem 120rem 30rem;
-    background-image: linear-gradient(rgba($red,0.95), rgba($red,0.95)), url(/img/background2.jpg);
+    background-image: linear-gradient(rgba($red,0.95), rgba($red,0.95)), url(../img/background2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
 
-
-    &__click {
-        display: none;
-        grid-column: 3 / 4;
+    &__heading {
         grid-row: 1 / 2;
-        align-self: center;
-        justify-self: end;
-        margin-right: 50rem;
-
-        svg {
-            width: 60rem;
-            height: 60rem;
-            fill: white;
-        }
-    }
-
-    &__text {
-        grid-row: 2 / 3;
-        grid-column: 2 / 4; 
-
-        p span {
-            color: $orange;
-        }
-    }
-
-    &__image {
-        width: 100%;
-    }
-
-    &__awards {
-        grid-row: 3 / 4;
-        grid-column: 2 / 4;
-        img {
-            width: 100%;
+        grid-column: 2 / 3;
+        border-bottom: none;
+        @include respond(tab-land) {
+            // Media query
+            grid-row: 1 / 2;
+            grid-column: unset;
+            justify-self: center;
         }
     }
 
     &__slideshow {
         grid-row: 1 / span 3;
         align-self: center;
+        img {
+            width: 100%;
+        }
+        @include respond(tab-land) {
+            // Media query
+            grid-row: 2 / 3;
+        }
     }
 
-    &__heading {
-        grid-row: 1 / 2;
-        grid-column: 2 / 3;
-        border-bottom: none;
+    &__text {
+        grid-row: 2 / 3;
+        grid-column: 2 / 4;
+        @include respond(tab-land) {
+            // Media query
+            grid-row: 3 / 4;
+            grid-column: unset;
+        }
+        p span {
+            color: $orange;
+        }
     }
 
+    &__awards {
+        grid-row: 3 / 4;
+        grid-column: 2 / 4;
+        width: 100%;
+        @include respond(tab-land) {
+            // Media query
+            grid-row: 4 / 5;
+            grid-column: unset;
+        }
+    }
 }

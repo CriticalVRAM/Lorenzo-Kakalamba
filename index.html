@@ -9,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="node_modules/lightbox2/dist/css/lightbox.min.css">
@@ -35,7 +34,6 @@
     </nav>
 
     <header class="header" id="header">
-
         <div class="header__container">
             <img class="header__img" data-aos="fade-down" src="img/logo1.png" alt="The restaurant logo">
             <h1 class="heading1" data-aos="fade-left">Incredible food</h1>
@@ -43,32 +41,24 @@
             <div class="header__button" data-aos="fade-right">
                 <h3 class="heading3">Learn more</h3>
                 <a class="link-ani" href="#about">
-                    <svg class="header__icon animated fadeInDown delay-2s">
+                    <svg class="header__icon">
                         <use xlink:href="img/sprite.svg#icon-chevron-with-circle-down"></use>
                     </svg>
                 </a>
             </div>
         </div>
-
     </header>
 
     <section class="about" id="about">
-
+        <h4 class="heading4 about__heading" data-aos="fade-down">About us</h4>
         <div class="about__slideshow" data-aos="fade-left">
-            <div class="about__slide"><img src="img/slide1.jpg" alt="slide 1" class="about__image"></div>
-            <div class="about__slide"><img src="img/slide2.jpg" alt="slide 2" class="about__image"></div>
-            <div class="about__slide"><img src="img/slide3.jpg" alt="slide 3" class="about__image"></div>
-            <div class="about__slide"><img src="img/slide4.jpg" alt="slide 4" class="about__image"></div>
-            <div class="about__slide"><img src="img/slide5.jpg" alt="slide 5" class="about__image"></div>
+            <div class="about__slide"><img src="img/slide1.jpg" alt="slide 1"></div>
+            <div class="about__slide"><img src="img/slide2.jpg" alt="slide 2"></div>
+            <div class="about__slide"><img src="img/slide3.jpg" alt="slide 3"></div>
+            <div class="about__slide"><img src="img/slide4.jpg" alt="slide 4"></div>
+            <div class="about__slide"><img src="img/slide5.jpg" alt="slide 5"></div>
         </div>
-
-        <h4 class="heading4 about__heading" data-aos="fade-right">About us</h4>
-        <a href="#" class="about__click" data-aos="fade-right">
-            <svg class="about__icon">
-                <use xlink:href="img/sprite.svg#icon-chevron-with-circle-right"></use>
-            </svg>
-        </a>
-        <div class="about__text" data-aos="fade-right">
+        <div class="about__text">
             <p class="par">
                 <span>"WhereYouEatWell Lorenzo and KAKALAMBA"</span> is the original space with the unique conception
                 based on the
@@ -92,11 +82,7 @@
                     delivered
                 </span>, and in the area of former Yugoslavia none, besides this one to Lorenzo & Kakalamba.</p>
         </div>
-
-        <div class="about__awards">
-            <img src="img/award.png" alt="Our awards">
-        </div>
-
+        <img class="about__awards" src="img/award.png" alt="Our awards">
     </section>
 
     <section class="menu" id="menu">

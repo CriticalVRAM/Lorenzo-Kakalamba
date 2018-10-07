@@ -23,6 +23,10 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min-content, 150rem));
         grid-auto-rows: minmax(min-content, 55.5rem);
+        @include respond(phone) {
+            // Media query
+            grid-auto-rows: minmax(min-content, 30rem);
+        }
 
         align-items: center;
         justify-items: center;

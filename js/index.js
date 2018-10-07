@@ -5,7 +5,7 @@ $(document).ready(function () {
     })
 
     $('.about__slideshow').slick({
-        autoplay: true,
+        
         arrows: false
     })
     $('.menu__box').tabslet({
@@ -75,6 +75,15 @@ $(document).ready(function () {
             centerMode: true,
             focusOnSelect: true,
             arrows: false,
+            responsive: [
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                  }
+                }
+            ]
         })
     }
     function activateGallery(cur) {
