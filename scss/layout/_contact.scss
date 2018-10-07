@@ -2,6 +2,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 90rem 70rem;
+    @include respond(tab-land) {
+        // Media query
+        grid-template-columns: unset;
+    }
+    @include respond(phone) {
+        // Media query
+        padding: 55rem 20rem 40rem 20rem;
+    }
 
     background-image: linear-gradient(rgba($red,0.9), rgba($red,0.9)), url(../img/background3.jpg);
     background-attachment: fixed;
@@ -17,6 +25,10 @@
     &__item {
         font-size: 22rem;
         margin-bottom: 5rem;
+        @include respond(tab-port) {
+            // Media query
+            font-size: 18rem;
+        }
     }
 
     &__hours {

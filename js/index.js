@@ -1,8 +1,6 @@
 $(document).ready(function () {
     new SmoothScroll('.link-ani')
-    AOS.init({
-        duration: 1000,
-    })
+    AOS.init({duration: 1000})
 
     $('.about__slideshow').slick({
         

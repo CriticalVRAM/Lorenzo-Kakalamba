@@ -13,6 +13,10 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(auto-fit, minmax(100rem, 1fr));
         grid-gap: 10rem;
+        @include respond(tab-port) {
+            // Media query
+            grid-template-columns: 1fr 1fr;
+        }
 
         span {
             color: white;
@@ -31,6 +35,10 @@
             font-size: 30rem;
             font-weight: 300;
             text-align: center;
+            @include respond(phone) {
+                // Media query
+                font-size: 25rem;
+            }
         }
     }
 
