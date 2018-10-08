@@ -1,0 +1,45 @@
+.career-nav {
+    width: 100%;
+    background-color: #212121;
+    padding: 10rem 40rem;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+
+    
+    &__link {
+        text-decoration: none;
+        color: white;
+        &:hover {
+            div svg {
+                transform: translateX(-0.65vw);
+            }
+        }
+    }
+
+    &__box {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+    }
+
+    &__icon {
+        max-width: 60rem;
+        max-height: 60rem;
+        fill: $red;
+        transition: .3s;
+    }
+
+
+    &__text {
+        margin-left: 15rem;
+        font-size: 14rem;
+    }
+
+
+    &__logo {
+        width: 300rem;
+        justify-self: end;
+    }
+}
