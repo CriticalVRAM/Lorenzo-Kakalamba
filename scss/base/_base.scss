@@ -7,10 +7,10 @@
 }
 
 html {
-    font-size: 6.25%; // 1rem = 1px
+    font-size: 62.5%; // 1rem = 10px
     @include respond(tab-land) {
         // Media query
-        font-size: 5.5%;
+        font-size: 60%;
     }
 }
 
@@ -20,5 +20,5 @@ body {
 
 .activeTabView {
     transition: .5s;
-    border-bottom: 5rem solid $red-light;
+    border-bottom: .5rem solid $red-light;
 }

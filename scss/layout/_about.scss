@@ -6,7 +6,15 @@
     grid-template-columns: 50% 1fr 1fr;
     grid-template-rows: min-content 4fr min-content;
     grid-auto-flow: dense;
-    grid-gap: 40rem;
+    grid-gap: 4rem;
+    @include respond(tab-land) {
+        // Media query
+        grid-gap: 3rem;
+    }
+    @include respond(phone) {
+        // Media query
+        grid-gap: 1rem;
+    }
     justify-content: center;
     @include respond(tab-land) {
         // Media query
@@ -14,11 +22,11 @@
         grid-template-columns: 100%;
         grid-auto-flow: unset;
 
-        padding: 20rem;
-        padding-top: 55rem;
+        padding: 2rem;
+        padding-top: 5.5rem;
     }
 
-    padding: 120rem 30rem 120rem 30rem;
+    padding: 12rem 3rem 12rem 3rem;
     background-image: linear-gradient(rgba($red,0.95), rgba($red,0.95)), url(../img/background2.jpg);
     background-size: cover;
     background-position: center;
@@ -40,12 +48,15 @@
     &__slideshow {
         grid-row: 1 / span 3;
         align-self: center;
+        justify-self: center;
+        width: 100%;
         img {
             width: 100%;
         }
         @include respond(tab-land) {
             // Media query
             grid-row: 2 / 3;
+            width: 80%;
         }
     }
 

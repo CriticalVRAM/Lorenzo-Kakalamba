@@ -1,18 +1,18 @@
 .special {
     max-width: 100vw;
-    padding: 70rem 15rem 40rem 15rem;
+    padding: 7rem 1.5rem 4rem 1.5rem;
 
     @include respond(phone) {
         // Media query
-        padding: 20rem;
-        padding-top: 55rem;
+        padding: 2rem;
+        padding-top: 5.5rem;
     }
 
     &__box {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: repeat(auto-fit, minmax(100rem, 1fr));
-        grid-gap: 10rem;
+        grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
+        grid-gap: 1rem;
         @include respond(tab-port) {
             // Media query
             grid-template-columns: 1fr 1fr;
@@ -28,34 +28,34 @@
             left: 50%;
             transform: translate(-50%, -50%);
             
-            padding: 10rem;
+            padding: 1rem;
             opacity: 0;
             background-color: $red;
             border-radius: 3px;
-            font-size: 30rem;
+            font-size: 3rem;
             font-weight: 300;
             text-align: center;
             @include respond(phone) {
                 // Media query
-                font-size: 25rem;
+                font-size: 2.5rem;
             }
         }
     }
 
     &__heading {
-        margin-bottom: 5rem;
+        margin-bottom: .5rem;
 
         color: $red;
         text-align: center;
     }
 
     &__info {
-        margin-bottom: 50rem;
+        margin-bottom: 5rem;
 
         color: gray;
         font-style: italic;
         text-align: center;
-        font-size: 16rem;
+        font-size: 1.6rem;
     }
     
     &__item {
@@ -78,6 +78,6 @@
 }
 
 .lb-data .lb-details .lb-caption {
-    font-size: 13.5rem;
+    font-size: 1.35rem;
     color: white;
 }

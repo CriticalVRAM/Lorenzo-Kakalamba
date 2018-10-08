@@ -1,10 +1,10 @@
 .booking {
-    padding: 70rem 10rem;
+    padding: 7rem 1rem;
     background-color: $red-dark;
     @include respond(phone) {
         // Media query
-        padding-top: 55rem;
-        padding-bottom: 20rem;
+        padding-top: 5.5rem;
+        padding-bottom: 2rem;
 
     }
 
@@ -12,32 +12,32 @@
         display: grid;
         align-items: center;
         justify-items: center;
-        grid-row-gap: 20rem;
+        grid-row-gap: 2rem;
     }
 
     &__area {
         display: grid;
-        grid-row-gap: 10rem;
+        grid-row-gap: 1rem;
     }
 
     &__item {
         display: grid;
         grid-template-columns: 1fr 1fr;
         &--butt {
-            margin-bottom: 8rem;    
+            margin-bottom: .8rem;    
         }
     }
 
     &__label {
-        font-size: 20rem;
+        font-size: 2rem;
         @include respond(phone) {
             // Media query
-            font-size: 14rem;
+            font-size: 1.4rem;
         }
     }
 
     &__input {
-        padding: 5rem;
+        padding: .5rem;
         border-radius: 10px;
         outline: none;
         box-shadow: 0;
@@ -47,25 +47,25 @@
         &:invalid {
             border-bottom: 7px solid $red;
         }
-        font-size: 16rem;
+        font-size: 1.6rem;
         @include respond(phone) {
             // Media query
-            font-size: 14rem;
+            font-size: 1.4rem;
         }
     }
 
     &__btn {
-        margin-top: 30rem;
+        margin-top: 3rem;
         padding: 10px;
-        width: 170rem;
+        width: 17rem;
         @include respond(phone) {
             // Media query
-            width: 140rem;
-            font-size: 30rem;
+            width: 14rem;
+            font-size: 3rem;
         }
 
         outline: none;
-        font-size: 40rem;
+        font-size: 4rem;
         font-weight: 300;
         text-transform: uppercase;
         color: white;

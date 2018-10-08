@@ -16,7 +16,7 @@
         display: grid;
         grid-template-rows: min-content min-content min-content;
         align-items: center;
-        grid-row-gap: 20rem;
+        grid-row-gap: 2rem;
 
         text-align: center;
     }
@@ -35,12 +35,12 @@
         grid-template-rows: 1fr 1fr;
         justify-items: center;
         align-items: center;
-        grid-row-gap: 20rem;
+        grid-row-gap: 2rem;
     }
 
     &__icon {
         fill: $red;
-        width: 60rem;
-        height: 60rem;
+        width: 6rem;
+        height: 6rem;
     }
 }
