@@ -2,10 +2,15 @@
     width: 100%;
     background-color: #212121;
     padding: 1rem 4rem;
+    @include respond(phone) {
+        // Media query
+        padding: 1rem 2rem;
+    }
 
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
+    grid-gap: .5rem;
 
     
     &__link {
@@ -25,21 +30,36 @@
     }
 
     &__icon {
-        max-width: 6rem;
-        max-height: 6rem;
+        width: 6rem;
+        height: 6rem;
         fill: $red;
         transition: .3s;
+        @include respond(phone) {
+            // Media query
+            width: 4rem;
+            height: 4rem;
+        }
     }
 
 
     &__text {
         margin-left: 1.5rem;
         font-size: 1.4rem;
+        @include respond(phone) {
+            // Media query
+            margin-left: .5rem;
+            font-size: 1.2rem;
+        }
     }
 
 
     &__logo {
-        width: 3rem;
+        max-width: 30rem;
+        width: 100%;
         justify-self: end;
+        @include respond(phone) {
+            // Media query
+            
+        }
     }
 }

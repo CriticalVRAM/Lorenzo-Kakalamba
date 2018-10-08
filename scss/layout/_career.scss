@@ -1,4 +1,4 @@
-.booking {
+.job {
     padding: 7rem 1rem;
     background-color: $red-dark;
     @include respond(phone) {
@@ -14,11 +14,11 @@
         justify-items: center;
         grid-row-gap: 2rem;
         grid-template-columns: max-content;
+        justify-content: center;
         @include respond(phone) {
             // Media query
             grid-template-columns: unset;
         }
-        justify-content: center;
     }
 
     &__area {
@@ -96,6 +96,8 @@
     }
 
     &__note {
+        text-align: center;
         border-bottom: 3px solid $red;
+        font-size: 1.8rem;
     }
 }

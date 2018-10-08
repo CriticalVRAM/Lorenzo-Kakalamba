@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
 </head>
+
 <body>
     <nav class="career-nav">
         <a class="career-nav__link" href="index.html">
@@ -21,7 +23,90 @@
     </nav>
 
     <section class="job">
-        &nbsp;
+        <form class="job__form">
+            <p class="job__note">Ukoliko ste zainteresovani za rad u našem restoranu,<br> pošaljite vaš CV ili popunite
+                aplikaciju za zaposlenje.</p>
+            <fieldset class="job__area">
+                <div class="job__item">
+                    <label class="job__label" for="cv">CV <abbr title="required">*</abbr></label>
+                    <input class="job__input" id="cv" type="file" name="cv" required>
+                </div>
+                <div class="job__item">
+                    <label class="job__label" for="slika">Slika: <abbr title="required">*</abbr></label>
+                    <input class="job__input" id="slika" type="file" name="slika" required>
+                </div>
+                <div class="job__item">
+                    <label class="job__label" for="first-name">Ime: <abbr title="required">*</abbr></label>
+                    <input class="job__input" id="first-name" type="text" name="ime" required>
+                </div>
+                <div class="job__item">
+                    <label class="job__label" for="first-name">Ime: <abbr title="required">*</abbr></label>
+                    <input class="job__input" id="first-name" type="text" name="ime" required>
+                </div>
+                <div class="job__item">
+                    <label class="job__label" for="last-name">Prezime: <abbr title="required">*</abbr></label>
+                    <input class="job__input" id="last-name" type="text" name="prezime" required>
+                </div>
+                <div class="job__item">
+                    <label class="job__label" for="date">Datum rođenja: <abbr title="required">*</abbr></label>
+                    <input class="job__input" id="date" type="date" name="datum-rođenja" required>
+                </div>
+                <div class="job__item">
+                    <label class="job__label" for="obrazovanje">Stepen obrazovanja: <abbr title="required">*</abbr></label>
+                    <input class="job__input" id="obrazovanje" type="text" name="obrazovanje" required>
+                </div>
+            </fieldset>
+
+            <fieldset class="job__area">
+                <fieldset class="job__area">
+                    <div class="job__item">
+                        <label class="job__label" for="naziv-kompanije">Naziv kompanije: </label>
+                        <input class="job__input" id="naziv-kompanije" type="text" name="naziv-kompanije">
+                    </div>
+                    <div class="job__item">
+                        <label class="job__label" for="pozicija">Pozicija: </label>
+                        <input class="job__input" id="pozicija" type="text" name="pozicija">
+                    </div>
+                    <div class="job__item">
+                        <label class="job__label" for="period">Period: (meseci) </label>
+                        <input class="job__input" id="period" type="text" name="period">
+                    </div>
+                </fieldset>
+                <fieldset class="job__area">
+                    <div class="job__item">
+                        <label class="job__label" for="naziv-kompanije">Naziv kompanije: </label>
+                        <input class="job__input" id="naziv-kompanije" type="text" name="naziv-kompanije">
+                    </div>
+                    <div class="job__item">
+                        <label class="job__label" for="pozicija">Pozicija: </label>
+                        <input class="job__input" id="pozicija" type="text" name="pozicija">
+                    </div>
+                    <div class="job__item">
+                        <label class="job__label" for="period">Period: (meseci) </label>
+                        <input class="job__input" id="period" type="text" name="period">
+                    </div>
+                </fieldset>
+                <fieldset class="job__area">
+                    <div class="job__item">
+                        <label class="job__label" for="naziv-kompanije">Naziv kompanije: </label>
+                        <input class="job__input" id="naziv-kompanije" type="text" name="naziv-kompanije">
+                    </div>
+                    <div class="job__item">
+                        <label class="job__label" for="pozicija">Pozicija: </label>
+                        <input class="job__input" id="pozicija" type="text" name="pozicija">
+                    </div>
+                    <div class="job__item">
+                        <label class="job__label" for="period">Period: (meseci) </label>
+                        <input class="job__input" id="period" type="text" name="period">
+                    </div>
+                </fieldset>
+                <div class="job__item">
+                    <label class="job__label" for="remark"><span>Remark: </span></label>
+                    <textarea class="job__textarea" placeholder="Write something" id="remark"></textarea>
+                </div>
+            </fieldset>
+            <button class="job__btn" type="submit">Send</button>
+        </form>
     </section>
 
     <footer class="footer">
@@ -49,7 +134,8 @@
                     </a>
                 </li>
                 <li class="footer__social-item">
-                    <a href="https://www.tripadvisor.co.uk/Restaurant_Review-g294472-d2287452-Reviews-Lorenzo_Kakalamba-Belgrade.html" class="footer__social-link">
+                    <a href="https://www.tripadvisor.co.uk/Restaurant_Review-g294472-d2287452-Reviews-Lorenzo_Kakalamba-Belgrade.html"
+                        class="footer__social-link">
                         <svg class="footer__icon tripadvisor">
                             <use xlink:href="img/sprite.svg#icon-tripadvisor"></use>
                         </svg>
@@ -90,4 +176,5 @@
         <p class="footer__copy">&copy; 2018 Uroš Radulović All Rights Reserved</p>
     </footer>
 </body>
+
 </html>
