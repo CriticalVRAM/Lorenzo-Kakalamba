@@ -19,13 +19,16 @@
                 <p class="career-nav__text">Nazad na <br> glavnu stranu</p>
             </div>
         </a>
-        <img src="img/logo1.png" alt="Logo" class="career-nav__logo">
+        <img src="img/logo1.png" alt="Logo" class="career-nav__logo">   
     </nav>
 
     <section class="job">
         <form class="job__form">
-            <p class="job__note">Ukoliko ste zainteresovani za rad u našem restoranu,<br> pošaljite vaš CV ili popunite
-                aplikaciju za zaposlenje.</p>
+            <p class="job__note">
+                Ukoliko ste zainteresovani za rad u našem restoranu,<br> pošaljite vaš CV ili popunite
+                aplikaciju za zaposlenje.
+            </p>
+            <p class="job__title">Lični podaci: </p>
             <fieldset class="job__area">
                 <div class="job__item">
                     <label class="job__label" for="cv">CV <abbr title="required">*</abbr></label>
@@ -34,10 +37,6 @@
                 <div class="job__item">
                     <label class="job__label" for="slika">Slika: <abbr title="required">*</abbr></label>
                     <input class="job__input" id="slika" type="file" name="slika" required>
-                </div>
-                <div class="job__item">
-                    <label class="job__label" for="first-name">Ime: <abbr title="required">*</abbr></label>
-                    <input class="job__input" id="first-name" type="text" name="ime" required>
                 </div>
                 <div class="job__item">
                     <label class="job__label" for="first-name">Ime: <abbr title="required">*</abbr></label>
@@ -57,6 +56,19 @@
                 </div>
             </fieldset>
 
+            <p class="job__title">Kontakt podaci: </p>
+            <fieldset class="job__area">
+                <div class="booking__item">
+                    <label class="booking__label" for="telefon">Telefon: <abbr title="required">*</abbr></label>
+                    <input class="booking__input" id="telefon" type="tel" name="telefon" required>
+                </div>
+                <div class="booking__item">
+                    <label class="booking__label" for="email">Email: <abbr title="required">*</abbr></label>
+                    <input class="booking__input" id="email" type="email" name="email" required>
+                </div>
+            </fieldset>
+
+            <p class="job__title">Radno iskustvo: </p>
             <fieldset class="job__area">
                 <fieldset class="job__area">
                     <div class="job__item">

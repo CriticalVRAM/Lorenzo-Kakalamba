@@ -4,7 +4,8 @@ $(document).ready(function () {
 
     $('.about__slideshow').slick({
         autoplay: true,
-        arrows: false
+        arrows: false,
+        autoplaySpeed: 2000,
     })
     $('.menu__box').tabslet({
         animation: true,
