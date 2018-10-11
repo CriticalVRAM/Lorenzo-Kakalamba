@@ -5,6 +5,11 @@
     display: grid;
     align-items: center;
     justify-items: center;
+    @include respond(ie11) {
+        // Media query
+        display: flex;
+        justify-content: center;
+    }
 
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.2)), url(../img/hero.jpg);
     background-position: center;
@@ -19,6 +24,11 @@
         grid-row-gap: 2rem;
 
         text-align: center;
+        @include respond(ie11) {
+            // Media query
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__img {
