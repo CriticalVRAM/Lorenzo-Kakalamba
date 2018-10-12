@@ -27,6 +27,7 @@
         @include respond(ie11) {
             // Media query
             display: flex;
+            justify-content: space-between;
         }
     }
     &__item {
@@ -41,11 +42,6 @@
                 grid-column: 1 / 2;
                 grid-row: 1 / 3;
             }
-        }
-        @include respond(ie11) {
-            // Media query
-            flex-grow: 1;
-            margin: auto;
         }
     }
     &__link {

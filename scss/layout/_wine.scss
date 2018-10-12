@@ -6,6 +6,12 @@
         padding: 2rem;
         padding-top: 5.5rem;
     }
+    @include respond(ie11) {
+        // Media query
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 
     display: grid;
     align-items: center;
@@ -26,6 +32,12 @@
         @include respond(phone) {
             // Media query
             grid-auto-rows: minmax(min-content, 3rem);
+        }
+        @include respond(ie11) {
+            // Media query
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
 
         align-items: center;
@@ -84,6 +96,10 @@
     &__desc {
         font-size: 1.4rem;
         font-style: italic;
+        @include respond(ie11) {
+            // Media query
+            grid-row: 2;
+        }
     }
 
     &__heading {

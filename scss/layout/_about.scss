@@ -72,6 +72,10 @@
         p span {
             color: $orange;
         }
+        @include respond(ie11) {
+            // Media query
+            margin-left: 4rem;
+        }
     }
 
     &__awards {

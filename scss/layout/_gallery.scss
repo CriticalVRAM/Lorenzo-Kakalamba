@@ -34,6 +34,11 @@
         grid-auto-rows: min-content;
         justify-items: center;
         grid-row-gap: 1.5rem;
+        @include respond(ie11) {
+            // Media query
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
 
         margin-bottom: 5rem;
         list-style: none;
@@ -48,13 +53,21 @@
             margin-bottom: .5rem;
         }
 
-        li a {
-            font-size: 2.4rem;
-            font-family: $font-heading;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: white;
+        li {
+            @include respond(ie11) {
+                // Media query
+                display: flex;
+                justify-content: center;
+            }
+            a {
+                font-size: 2.4rem;
+                font-family: $font-heading;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: white;
+            }
         }
+        
     }
 
     .slick-slide div {
@@ -90,5 +103,36 @@
         left: 0;
         top: 40%;
         cursor: pointer;
+    }
+
+    @include respond(ie11) {
+        // Media query
+        #gallery-ie11-1 {
+            grid-column: 1;
+            grid-row: 1;
+            margin-bottom: 1rem;
+        }
+        #gallery-ie11-2 {
+            grid-column: 2;
+            grid-row: 1;
+            margin-bottom: 1rem;
+        }
+        #gallery-ie11-3 {
+            grid-column: 3;
+            grid-row: 1;
+            margin-bottom: 1rem;
+        }
+        #gallery-ie11-4 {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        #gallery-ie11-5 {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        #gallery-ie11-6 {
+            grid-column: 3;
+            grid-row: 2;
+        }
     }
 }

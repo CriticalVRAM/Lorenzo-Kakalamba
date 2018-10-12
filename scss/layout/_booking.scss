@@ -19,17 +19,35 @@
             grid-template-columns: unset;
         }
         justify-content: center;
+        @include respond(ie11) {
+            // Media query
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__area {
         display: grid;
         grid-row-gap: 1rem;
         width: 100%;
+        @include respond(ie11) {
+            // Media query
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
     }
 
     &__item {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        @include respond(ie11) {
+            // Media query
+            display: flex;
+            margin-bottom: 1rem;
+        }
         &--butt {
             margin-bottom: .8rem;    
         }
@@ -40,6 +58,10 @@
         @include respond(phone) {
             // Media query
             font-size: 1.4rem;
+        }
+        @include respond(ie11) {
+            // Media query
+            margin-right: 2rem;
         }
     }
 
@@ -97,5 +119,9 @@
 
     &__note {
         border-bottom: 3px solid $red;
+        @include respond(ie11) {
+            // Media query
+            margin-bottom: 2rem;
+        }
     }
 }

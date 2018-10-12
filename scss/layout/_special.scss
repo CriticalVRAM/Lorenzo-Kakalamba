@@ -17,6 +17,11 @@
             // Media query
             grid-template-columns: 1fr 1fr;
         }
+        @include respond(ie11) {
+            // Media query
+            display: flex;
+            flex-wrap: wrap;
+        }
 
         span {
             color: white;
@@ -61,6 +66,11 @@
     &__item {
         position: relative;
         overflow: hidden;
+        @include respond(ie11) {
+            // Media query
+            flex-grow: 1;
+            flex-basis: 33.33%;
+        }
     }
     
     &__item:hover &__img {
