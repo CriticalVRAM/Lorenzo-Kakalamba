@@ -99,6 +99,7 @@
         @include respond(phone) {
             // Media query
             justify-items: center;
+            justify-content: center;
         }
         @include respond(ie11) {
             // Media query
@@ -137,6 +138,12 @@
             // Media query
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr;
+        }
+        &:first-child {
+            @include respond(ie11) {
+                // Media query
+                margin-right: 0.5rem;
+            }
         }
         @include respond(ie11) {
             // Media query

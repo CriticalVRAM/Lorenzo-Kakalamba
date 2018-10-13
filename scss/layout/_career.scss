@@ -7,6 +7,12 @@
         padding-bottom: 2rem;
 
     }
+    @include respond(ie11) {
+        // Media query
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     &__form {
         display: grid;
@@ -19,17 +25,32 @@
             // Media query
             grid-template-columns: unset;
         }
+        @include respond(ie11) {
+            // Media query
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__area {
         display: grid;
         grid-row-gap: 1rem;
         width: 100%;
+        @include respond(ie11) {
+            // Media query
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__item {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        @include respond(ie11) {
+            // Media query
+            display: flex;
+            margin-bottom: 1rem;
+        }
         &--butt {
             margin-bottom: .8rem;    
         }
@@ -40,6 +61,11 @@
         @include respond(phone) {
             // Media query
             font-size: 1.4rem;
+        }
+        @include respond(ie11) {
+            // Media query
+            margin-right: 4rem;
+            flex-grow: 1;
         }
     }
 
@@ -106,5 +132,10 @@
         font-size: 1.8rem;
         justify-self: start;
         border-bottom: 3px solid $red;
+        @include respond(ie11) {
+            // Media query
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }
     }
 }

@@ -12,10 +12,19 @@
     align-items: center;
     grid-gap: .5rem;
 
+    @include respond(ie11) {
+        // Media query
+        display: flex;
+    }
+
     
     &__link {
         text-decoration: none;
         color: white;
+        @include respond(ie11) {
+            // Media query
+            flex-grow: 1;
+        }
         &:hover {
             div svg {
                 transform: translateX(-0.65vw);
