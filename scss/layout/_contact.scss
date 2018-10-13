@@ -10,6 +10,11 @@
         // Media query
         padding: 5.5rem 2rem 4rem 2rem;
     }
+    @include respond(ie11) {
+        // Media query
+        display: flex;
+        justify-content: center;
+    }
 
     background-image: linear-gradient(rgba($red,0.9), rgba($red,0.9)), url(../img/background3.jpg);
     background-attachment: fixed;
@@ -20,6 +25,12 @@
     &__box {
         display: grid;
         justify-items: start;
+        @include respond(ie11) {
+            // Media query
+            display: flex;
+            flex-direction: column;
+            margin-right: 5rem;
+        }
     }
 
     &__item {
