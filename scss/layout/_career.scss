@@ -51,6 +51,9 @@
             display: flex;
             margin-bottom: 1rem;
         }
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            margin-bottom: 1rem;
+        }
         &--butt {
             margin-bottom: .8rem;    
         }

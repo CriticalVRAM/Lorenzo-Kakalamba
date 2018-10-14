@@ -40,8 +40,6 @@
             // Media query
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
             margin-bottom: 2rem;
         }
     }
@@ -55,6 +53,9 @@
             margin-bottom: 1rem;
             align-content: space-between;
             flex-grow: 1;
+        }
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            margin-bottom: 1rem;
         }
         &--butt {
             margin-bottom: .8rem;    
