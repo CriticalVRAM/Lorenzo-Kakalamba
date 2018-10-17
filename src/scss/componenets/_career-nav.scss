@@ -1,0 +1,78 @@
+.career-nav {
+    width: 100%;
+    background-color: #212121;
+    padding: 1rem 4rem;
+    @include respond(phone) {
+        // Media query
+        padding: 1rem 2rem;
+    }
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    grid-gap: .5rem;
+
+    @include respond(ie11) {
+        // Media query
+        display: flex;
+    }
+
+    
+    &__link {
+        text-decoration: none;
+        color: white;
+        @include respond(ie11) {
+            // Media query
+            flex-grow: 1;
+        }
+        &:hover {
+            div svg {
+                transform: translateX(-0.65vw);
+            }
+        }
+    }
+
+    &__box {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        @include respond(ie11) {
+            // Media query
+            display: flex;
+        }
+    }
+
+    &__icon {
+        width: 6rem;
+        height: 6rem;
+        fill: $red;
+        transition: .3s;
+        @include respond(phone) {
+            // Media query
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
+
+    &__text {
+        margin-left: 1.5rem;
+        font-size: 1.4rem;
+        @include respond(phone) {
+            // Media query
+            margin-left: .5rem;
+            font-size: 1.2rem;
+        }
+    }
+
+
+    &__logo {
+        max-width: 30rem;
+        width: 100%;
+        justify-self: end;
+        @include respond(phone) {
+            // Media query
+            
+        }
+    }
+}

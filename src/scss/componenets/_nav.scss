@@ -1,0 +1,73 @@
+.nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background-color: #212121;
+
+    padding: 1rem;
+    @include respond(phone) {
+        // Media query
+        padding: .5rem;
+    }
+
+    &__list {
+        display: grid;
+        grid-column-gap: .5rem;
+        align-items: center;
+        justify-items: center;
+        grid-auto-flow: column;
+        list-style: none;
+
+        @include respond(tab-port) {
+            // Media query
+            grid-template-rows: min-content 1fr;
+            grid-row-gap: .5rem;
+        }
+        @include respond(ie11) {
+            // Media query
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__item {
+        transition: .2s;
+        &:hover {
+            transform: scale(1.1);
+        }
+        &--head {
+            grid-column: 6 / 7;
+            @include respond(tab-port) {
+                // Media query
+                grid-column: 1 / 2;
+                grid-row: 1 / 3;
+            }
+        }
+    }
+    &__link {
+        text-decoration: none;
+        font-size: 2.4rem;
+        color: $red;
+        font-family: $font-heading;
+        @include respond(tab-port) {
+            // Media query
+            font-size: 2rem;
+        }
+        @include respond(phone) {
+            // Media query
+            font-size: 1.8rem;
+        }
+    }
+    &__current {
+        transition: .3s;
+        border-bottom: .3rem solid $red-light;
+    }
+    &__icon {
+        width: 4rem;
+        height: auto;
+        @include respond(phone) {
+            // Media query
+            width: 3rem;
+        }
+    }
+}

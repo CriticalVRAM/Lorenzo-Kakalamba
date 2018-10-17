@@ -1,0 +1,22 @@
+/* MEDIA QUERY MANAGER
+/ SIZE /          / NAME /            / $breakpoint name
+0 - 600px   :      Phone              / phone
+600 - 900px :      Tablet - portrait  / tab-port
+900 - 1200px:      Tablet - landscape / tab-land
+1800px+     :      Tablet - portrait  / big-decktop
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };  //600px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content }; //900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content };    //1200px
+    }
+    @if $breakpoint == ie11 {
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { @content }; // media for ie11
+    }
+}

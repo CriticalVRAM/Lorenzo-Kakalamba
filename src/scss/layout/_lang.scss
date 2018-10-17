@@ -1,0 +1,58 @@
+.lang {
+    width: 100vw;
+    height: 100vh;
+    background-color: $red-dark;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__img {
+        width: 10rem;
+        height: auto;
+    }
+    &__text {
+        margin-top: 4rem;
+    }
+    &__btn-box {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 3rem;
+    }
+    &__btn {
+        margin-top: 3rem;
+        padding: 10px 20px;
+        
+        outline: none;
+        font-size: 1.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: white;
+        background-color: $red;
+        border: 3px $red-light solid;
+        border-radius: 100px;
+        transition: .3s;
+        cursor: pointer;
+        &:hover {
+            border: 3px $red solid;
+            transform: scale(1.05);
+        }
+        
+        &--first {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        &--second {
+            grid-column: 2;
+            grid-row: 1;
+        }
+    }
+}

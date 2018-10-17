@@ -1,0 +1,65 @@
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 9rem 7rem;
+    @include respond(tab-land) {
+        // Media query
+        grid-template-columns: unset;
+    }
+    @include respond(phone) {
+        // Media query
+        padding: 5.5rem 2rem 4rem 2rem;
+    }
+    @include respond(ie11) {
+        // Media query
+        display: flex;
+        justify-content: center;
+    }
+
+    background-image: linear-gradient(rgba($red,0.9), rgba($red,0.9)), url(../img/background3.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    
+    &__box {
+        display: grid;
+        justify-items: start;
+        @include respond(ie11) {
+            // Media query
+            display: flex;
+            flex-direction: column;
+            margin-right: 5rem;
+        }
+    }
+
+    &__item {
+        font-size: 2.2rem;
+        margin-bottom: .5rem;
+        @include respond(tab-port) {
+            // Media query
+            font-size: 1.8rem;
+        }
+    }
+
+    &__hours {
+        margin-top: 2rem;
+        border-top: 3px solid $red-light;
+    }
+
+    &__map {
+        width: 100%;
+        @include respond(tab-land) {
+            // Media query
+            width: 80%;
+            margin-top: 1.5rem;
+        }
+        @include respond(phone) {
+            // Media query
+            width: 95%;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
