@@ -1,5 +1,7 @@
 'use strict';
 
+svg4everybody()
+
 $(document).ready(function () {
     new SmoothScroll('.link-ani');
     AOS.init({ duration: 1000 });
