@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "js-concat": "concat -o index.js js/jquery.onepagenav.js js/jquery.tabslet.min.js js/lightbox.min.js js/svg4everybody.min.js js/index.js"
+    "js-concat": "concat -o dist/index.js src/js/jquery.onepagenav.js src/js/jquery.tabslet.min.js src/js/lightbox.min.js src/js/svg4everybody.min.js src/js/slick.min.js src/js/index.js"
   },
   "repository": {
     "type": "git",
