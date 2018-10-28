@@ -1,0 +1,41 @@
+.btn {
+    border: 3px $red-light solid;
+    border-radius: 100px;
+    outline: none;
+    color: white;
+    background-color: $red;
+    transition: .3s;
+    cursor: pointer;
+
+
+    &__footer {
+        align-self: center;
+        justify-self: center;
+        padding: 5px 1rem;
+
+        &:hover {
+            border: 3px $red solid;
+            transform: scale(1.05);
+        }
+    }
+
+    &__booking {
+        margin-top: 3rem;
+        padding: 10px;
+        width: 17rem;
+        
+        font-size: 4rem;
+        font-weight: 300;
+        text-transform: uppercase;
+
+        &:hover {
+            border: 3px $red solid;
+            transform: scale(1.05);
+        }
+        @include respond(phone) {
+            // Media query
+            width: 14rem;
+            font-size: 3rem;
+        }
+    }
+}

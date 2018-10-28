@@ -333,11 +333,19 @@ $(document).ready(function () {
                 break;
         }
 
-        var galleryTemplate = '\n        <div class="gallery__' + cur + '">\n            <div class="gallery__' + cur + '-selected">\n                ' + Array(imgNum).join(0).split(0).map(function (item, i) {
-            return '<img src="img/' + cur + (i + 1) + '.jpg" alt="' + cur + ' image ' + (i + 1) + '">';
-        }).join('') + '\n            </div>\n            <div class="gallery__' + cur + '-view">\n                ' + Array(imgNum).join(0).split(0).map(function (item, i) {
-            return '<img src="img/' + cur + (i + 1) + '.jpg" alt="' + cur + ' image ' + (i + 1) + '">';
-        }).join('') + '\n            </div>\n        </div>\n        ';
+        var galleryTemplate =
+            `
+                 <div class="gallery__${cur}">
+                     <div class="gallery__${cur}-selected">
+                        ${Array(imgNum).join(0).split(0).map((item, i) =>
+                        `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}">`).join('')}
+                    </div>
+               <div class="gallery__${cur}-view">
+                ${Array(imgNum).join(0).split(0).map((item, i) => 
+                `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}">`).join('')}
+            </div>
+        </div>
+        `
         document.getElementById(cur).innerHTML = galleryTemplate;
     }
     function showImages(cur) {
@@ -350,6 +358,8 @@ $(document).ready(function () {
             prevArrow: '<a class="gallery__prev"><svg class="gallery__icon"><use href="img/sprite.svg#icon-chevron-left"></use></svg></a>',
             nextArrow: '<a class="gallery__next"><svg class="gallery__icon"><use href="img/sprite.svg#icon-chevron-right"></use></svg></a>'
         });
+        $('.gallery__' + cur + '-selected').slick('setPosition')
+
         $('.gallery__' + cur + '-view').slick({
             slidesToShow: 4,
             slidesToScroll: 1,
@@ -370,7 +380,10 @@ $(document).ready(function () {
         clearGallery(cur);
         createGallery(cur);
         showImages(cur);
+        window.dispatchEvent(new Event('resize'));
     }
+
+    //Event listener set up
     var posible = ['interior', 'garden', 'events', 'food', 'deserts', 'details'];
     document.querySelector('.gallery__box').addEventListener('click', function (event) {
         if (posible.includes(event.target.innerHTML)) {
@@ -378,12 +391,14 @@ $(document).ready(function () {
         }
     }, true);
 
-    //Fix gallery bug
-    posible.forEach(function (cur) {
-        return activateGallery(cur);
-    });
+    // //Fix gallery bug
+    // posible.forEach(function (cur) {
+    //     return activateGallery(cur);
+    // });
     activateGallery('interior');
 
+
+    // Tab animations
     var tabsAnimation = ['.gallery__tabs', '.menu__tabs', '.wine__tabs'];
     tabsAnimation.forEach(function (cur) {
         return document.querySelector(cur).addEventListener('click', changeTab, true);
@@ -401,16 +416,4 @@ $(document).ready(function () {
         scrollSpeed: 750,
         filter: ':not(.external)'
     });
-})
-
-//         var galleryTemplate = 
-//         `
-//         <div class="gallery__${cur}">
-//             <div class="gallery__${cur}-selected">
-//                 ${Array(imgNum).join(0).split(0).map((item, i) => `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}">`).join('')}
-//             </div>
-//             <div class="gallery__${cur}-view">
-//                 ${Array(imgNum).join(0).split(0).map((item, i) => `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}">`).join('')}
-//             </div>
-//         </div>
-//         `
+});

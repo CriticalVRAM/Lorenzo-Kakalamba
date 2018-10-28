@@ -175,23 +175,6 @@
             
         }
     }
-    &__btn {
-        align-self: center;
-        justify-self: center;
-        padding: 5px 1rem;
-
-        outline: none;
-        color: white;
-        background-color: $red;
-        border: 3px $red-light solid;
-        border-radius: 100px;
-        transition: .3s;
-        cursor: pointer;
-        &:hover {
-            border: 3px $red solid;
-            transform: scale(1.05);
-        }
-    }
     &__copy {
         grid-column: 1 / -1;
         color: #424242;
