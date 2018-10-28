@@ -7,24 +7,15 @@
         padding: 1rem 2rem;
     }
 
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     align-items: center;
-    grid-gap: .5rem;
-
-    @include respond(ie11) {
-        // Media query
-        display: flex;
-    }
 
     
     &__link {
         text-decoration: none;
         color: white;
-        @include respond(ie11) {
-            // Media query
-            flex-grow: 1;
-        }
+        flex-grow: 1;
+
         &:hover {
             div svg {
                 transform: translateX(-0.65vw);
@@ -33,13 +24,9 @@
     }
 
     &__box {
-        display: grid;
-        grid-auto-flow: column;
+        display: flex;
         align-items: center;
-        @include respond(ie11) {
-            // Media query
-            display: flex;
-        }
+
     }
 
     &__icon {
@@ -65,14 +52,9 @@
         }
     }
 
-
     &__logo {
         max-width: 30rem;
         width: 100%;
         justify-self: end;
-        @include respond(phone) {
-            // Media query
-            
-        }
     }
 }
