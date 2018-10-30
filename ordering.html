@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>L&K Naručivanje</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+</head>
+
+<body>
+
+    <nav class="career-nav">
+        <a class="career-nav__link" href="index.html">
+            <div class="career-nav__box">
+                <svg class="career-nav__icon">
+                    <use href="img/sprite.svg#icon-arrow-left"></use>
+                </svg>
+                <p class="career-nav__text">Nazad na <br> glavnu stranu</p>
+            </div>
+        </a>
+        <a href="index.html"><img src="img/logo1.png" alt="Logo" class="career-nav__logo"></a>
+    </nav>
+
+    <section class="ordering">
+        <h4 class="heading4 ordering__heading">Menu</h4>
+        <div class="ordering__shop" data-toggle="tabslet">
+            <ul class="ordering__list">
+                <li class="ordering__item"><a href="#shop1" class="ordering__link">Hladna</a></li>
+                <li class="ordering__item"><a href="#shop2" class="ordering__link">Vrela</a></li>
+            </ul>
+            <div id="shop1" class="ordering__tab">
+                <div class="shop__item">
+                    <p class="shop__text">UKUS BITANGE</p>
+                    <p class="shop__price">980 Din</p>
+                    <p class="shop__desc">slajsevi prodimljene ajkule servirani na hlebu iz pizza peći, sa rukolom,
+                        čerijem
+                        i kalamata maslinama</p>
+                    <button class="btn btn__add">+</button>
+                </div>
+            </div>
+            <div id="shop2" class="ordering__tab">
+                <div class="shop__item">
+                    <p class="shop__text">TERIN OD HOBOTNICE</p>
+                    <p class="shop__price">1.600 Din</p>
+                    <p class="shop__desc">u dimu serviran na hrskavom biskvitu sa pateom od lososa i aromatičnom
+                        salatom</p>
+                    <button class="btn btn__add">+</button>
+                </div>
+
+                <div class="shop__item">
+                    <p class="shop__text">Burata</p>
+                    <p class="shop__price">1.120 Din</p>
+                    <p class="shop__desc">čeri paradajz, rukola, hladno ceđeno maslinovo ulje </p>
+                    <button class="btn btn__add">+</button>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+        <div class="ordering__cart">
+            <p class="ordering__total">Total</p>
+            <ul class="cart">
+                <!-- 
+                    <p class="cart__text">${cur.itemName}</p>
+                    <p class="cart__price">${cur.itemPrice}</p>
+                    <p class="cart__quantity">${cur.itemQuantity}</p>
+                    <button class="btn btn__remove">-</button>
+                 -->
+            </ul>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__nav">
+            <ul class="footer__social">
+                <li class="footer__social-item">
+                    <a href="https://www.facebook.com/lorenzokakalamba/" class="footer__social-link">
+                        <svg class="footer__icon facebook">
+                            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://twitter.com/Deselepojede" class="footer__social-link">
+                        <svg class="footer__icon twitter">
+                            <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://www.instagram.com/lorenzokakalamba/" class="footer__social-link">
+                        <svg class="footer__icon instagram">
+                            <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://www.tripadvisor.co.uk/Restaurant_Review-g294472-d2287452-Reviews-Lorenzo_Kakalamba-Belgrade.html"
+                        class="footer__social-link">
+                        <svg class="footer__icon tripadvisor">
+                            <use xlink:href="img/sprite.svg#icon-tripadvisor"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://foursquare.com/v/lorenzo--kakalamba/4d134a9280f6721e92bf1deb" class="footer__social-link">
+                        <svg class="footer__icon foursquare">
+                            <use xlink:href="img/sprite.svg#icon-foursquare"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="index.html#about" class="footer__link link-ani">About</a></li>
+                <li class="footer__item"><a href="index.html#menu" class="footer__link link-ani">Menu</a></li>
+                <li class="footer__item"><a href="index.html#specials" class="footer__link link-ani">Specials</a></li>
+                <li class="footer__item"><a href="index.html#wine" class="footer__link link-ani">Wine list</a></li>
+                <li class="footer__item"><a href="index.html#gallery" class="footer__link link-ani">Gallery</a></li>
+                <li class="footer__item"><a href="index.html#booking" class="footer__link link-ani">Booking</a></li>
+                <li class="footer__item"><a href="index.html#contact" class="footer__link link-ani">Contact</a></li>
+                <li class="footer__item"><a href="index.html#ordering" class="footer__link link-ani">Ordering</a></li>
+                <li class="footer__item"><a href="" class="footer__link link-ani">Job</a></li>
+            </ul>
+        </div>
+        <img src="img/lik1.png" alt="mascot 1" class="footer__logo">
+        <div class="footer__newsletter">
+            <form action="" class="footer__form">
+                <p class="footer__news-header">Subscribe to our newsletter</p>
+                <input type="email" class="footer__input footer__input--email" placeholder="email*" required>
+                <div class="footer__name-box">
+                    <input type="text" class="footer__input" placeholder="first name">
+                    <input type="text" class="footer__input" placeholder="last name">
+                </div>
+                <button class="btn btn__footer" type="submit">Send</button>
+            </form>
+        </div>
+        <p class="footer__copy">&copy; 2018 Uroš Radulović All Rights Reserved</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../src/js/jquery.tabslet.min.js"></script>
+    <script src="ordering.js"></script>
+</body>
+
+</html>
