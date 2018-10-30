@@ -1,31 +1,111 @@
 .ordering {
-    display: flex;
-    background-color: $red;
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: auto 1fr;
+
+    background-color: $red-dark;
+    padding-bottom: 3rem;
 
     &__shop {
-        flex-grow: 1;
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0 2rem;
     }
     &__cart {
-
+        grid-row: 1 / span 2
     }
     &__total {
         
+    }
+    &__heading {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 300;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min-content, 15rem));
+        grid-auto-rows: minmax(min-content, 5.55rem);
+        @include respond(phone) {
+            // Media query
+            grid-auto-rows: minmax(min-content, 3rem);
+        }
+        @include respond(ie11) {
+            // Media query
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        align-items: center;
+        justify-items: center;
+        justify-content: space-evenly;
+        text-align: center;
+
+        margin-bottom: 2rem;
+        background-color: $red;
+        padding: 1rem;
+        border-radius: 4px;
+        font-family: $font-heading;
+        font-size: 2rem;
+        list-style: none;
+
+        li {
+            a {
+                text-decoration: none;
+                color: white;
+                span {
+                    font-size: 1.6rem;
+                }
+            }
+        }
     }
 }
 
 .shop {
 
     &__item {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        grid-template-rows: 1fr 1fr;
 
+        align-items: center;
+        
+        margin-bottom: 1rem;
+        background-color: $red;
+        padding: 1rem;
+        border-radius: 4px;
     }
-    &__text {
-
-    }
-    &__price {
-
+    &__heading {
+        grid-column: 1;
+        grid-row: 1;
     }
     &__desc {
-
+        font-size: 1.4rem;
+        font-style: italic;
+        grid-column: 1;
+        grid-row: 2;
+    }
+    &__price {
+        font-family: $font-heading;
+        font-size: 3rem;
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        margin-right: 2rem;
+    }
+    &__btn {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        padding: .5rem 1rem;
+        background-color: $orange !important;
+        font-size: 2rem;
+        &:hover {
+            transform: scale(1.1) rotate(90deg);
+        }
     }
 }
 

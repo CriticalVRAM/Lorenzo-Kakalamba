@@ -22,7 +22,7 @@ body {
     overflow-x: hidden;
 }
 
-.activeTabView {
+.active {
     transition: .5s;
     border-bottom: .5rem solid $red-light;
 }

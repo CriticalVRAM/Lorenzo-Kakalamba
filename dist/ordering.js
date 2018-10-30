@@ -51,7 +51,7 @@ var handlers = {
         var total = []
         cart.cartItems.forEach(cur => {
             let quantity = cur.itemQuantity
-            total.push(parseInt(cur.itemPrice) * quantity)
+            total.push(parseInt(cur.itemPrice) * parseInt(quantity))
         })
         return total.reduce((acc, cur) => acc + cur, 0)
     }
@@ -80,6 +80,10 @@ var view = {
 
 document.querySelector('.ordering').addEventListener('click', handlers.processEvent, true)
 
-function test(event) {
-    console.log(event.target)
+document.querySelector('.ordering__list').addEventListener('click', changeTab, true)
+function changeTab(event) {
+    if (event.target.className === '.ordering__list') {
+        $('.' + event.currentTarget.className + ' li .activeTabView').removeClass('activeTabView');
+        $(event.target).addClass('activeTabView');
+    }
 }
