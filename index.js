@@ -383,19 +383,6 @@ $(document).ready(function () {
     }, true);
     activateGallery('interior');
 
-
-    // Tab animations
-    var tabsAnimation = ['.gallery__tabs', '.menu__tabs', '.wine__tabs'];
-    tabsAnimation.forEach(function (cur) {
-        return document.querySelector(cur).addEventListener('click', changeTab, true);
-    });
-    function changeTab(event) {
-        if (event.target.className === 'gallery__tab' || event.target.className === 'menu__tab' || event.target.className === 'wine__tab') {
-            $('.' + event.currentTarget.className + ' li .activeTabView').removeClass('activeTabView');
-            $(event.target).addClass('activeTabView');
-        }
-    }
-
     $('.nav').onePageNav({
         currentClass: 'nav__current',
         changeHash: false,
