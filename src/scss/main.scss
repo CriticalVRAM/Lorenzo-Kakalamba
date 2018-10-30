@@ -13,7 +13,16 @@
   'base/utilities',
   'base/normalize';
 
-// 3. Layout-related sections
+// 3. Components
+@import
+  'componenets/button',
+  'componenets/nav',
+  'componenets/career-nav',
+  'componenets/loader',
+  'componenets/slick',
+  'componenets/slick-theme';
+
+// 4. Layout-related sections
 @import
   'layout/header',
   'layout/footer',
@@ -27,12 +36,3 @@
   'layout/career',
   'layout/lang',
   'layout/ordering';
-
-// 4. Components
-@import
-  'componenets/button',
-  'componenets/nav',
-  'componenets/career-nav',
-  'componenets/loader',
-  'componenets/slick',
-  'componenets/slick-theme';

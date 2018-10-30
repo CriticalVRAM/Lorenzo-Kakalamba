@@ -53,7 +53,8 @@ var handlers = {
             let quantity = cur.itemQuantity
             total.push(parseInt(cur.itemPrice) * parseInt(quantity))
         })
-        return total.reduce((acc, cur) => acc + cur, 0)
+        total = total.reduce((acc, cur) => acc + cur, 0)
+        return `Total: ${total} din`
     }
 }
 
@@ -67,10 +68,12 @@ var view = {
             let newItem = document.createElement('li')
             newItem.innerHTML = 
             `
-            <p class="cart__text">${cur.itemName}</p>
-            <p class="cart__price">${cur.itemPrice}</p>
-            <p class="cart__quantity">${cur.itemQuantity}</p>
-            <button class="btn btn__remove">-</button>
+            <div class="cart__item">
+                <p class="cart__text">${cur.itemName}</p>
+                <p class="cart__price">${cur.itemPrice}</p>
+                <p class="cart__quantity">Quantity: ${cur.itemQuantity}</p>
+                <button class="btn shop__btn shop__btn--remove">-</button>
+            </div>
             `
             cartView.appendChild(newItem)
         })
