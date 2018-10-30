@@ -1,6 +1,6 @@
 'use strict';
 
-$(window).on('load', function(){
+$(window).on('load', function () {
     $(".loader").fadeOut()
 })
 
@@ -13,15 +13,6 @@ $(document).ready(function () {
         autoplay: true,
         arrows: false,
         autoplaySpeed: 2000
-    });
-    $('.menu__box').tabslet({
-        animation: true
-    });
-    $('.gallery__box').tabslet({
-        animation: true
-    });
-    $('.wine__box').tabslet({
-        animation: true
     });
 
     function clearGallery(cur) {
@@ -56,11 +47,11 @@ $(document).ready(function () {
                  <div class="gallery__${cur}">
                      <div class="gallery__${cur}-selected">
                         ${Array(imgNum).join(0).split(0).map((item, i) =>
-                        `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}">`).join('')}
+                `<img src="img/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
                     </div>
                <div class="gallery__${cur}-view">
-                ${Array(imgNum).join(0).split(0).map((item, i) => 
-                `<img src="img/${cur}${i+1}.jpg" alt="${cur} image ${i+1}">`).join('')}
+                ${Array(imgNum).join(0).split(0).map((item, i) =>
+                `<img src="img/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
             </div>
         </div>
         `

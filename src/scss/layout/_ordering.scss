@@ -1,0 +1,44 @@
+.ordering {
+    display: flex;
+    background-color: $red;
+
+    &__shop {
+        flex-grow: 1;
+    }
+    &__cart {
+
+    }
+    &__total {
+        
+    }
+}
+
+.shop {
+
+    &__item {
+
+    }
+    &__text {
+
+    }
+    &__price {
+
+    }
+    &__desc {
+
+    }
+}
+
+.cart {
+
+
+    &__text {
+
+    }
+    &__price {
+
+    }
+    &__quantity {
+
+    }
+}
