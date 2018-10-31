@@ -1,19 +1,34 @@
 .ordering {
     display: grid;
-    grid-template-columns: 70% 1fr;
+    grid-template-columns: auto auto;
     grid-template-rows: auto 1fr;
 
     background-color: $red-dark;
     padding-bottom: 3rem;
 
+    @include respond(tab-land) {
+        // Media query
+        display: flex;
+        flex-direction: column;
+    }
+
     &__shop {
         grid-column: 1;
         grid-row: 2;
         margin: 0 2rem;
+        @include respond(tab-port) {
+            // Media query
+            order: 4;
+        }
     }
     &__cart {
         grid-column: 2;
         grid-row: 2;
+
+        display: grid;
+        grid-template-rows: min-content min-content auto;
+
+        margin-right: 1rem;
     }
     &__total {
         font-size: 5rem;
@@ -30,11 +45,51 @@
         font-weight: 300;
         margin-bottom: 2rem;
         margin-top: 2rem;
+        @include respond(tab-port) {
+            // Media query
+            order: -1;
+        }
         &--cart {
             grid-column: 2;
             grid-row: 1;
+            @include respond(tab-port) {
+                // Media query
+                order: 1;
+            }
         }
     }
+    // Form
+    &__form {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    &__area {
+        display: flex;
+        flex-direction: column;
+    }
+    &__input {
+        padding: .5rem;
+        border-radius: 10px;
+        outline: none;
+        box-shadow: 0;
+        border: none;
+        border-bottom: 7px solid $green;
+        transition: .3s;
+
+        margin-bottom: 1rem;
+        &:invalid {
+            border-bottom: 7px solid $red;
+        }
+        font-size: 1.6rem;
+        @include respond(phone) {
+            // Media query
+            font-size: 1.4rem;
+        }
+    }
+    &__textarea {
+        margin-bottom: 1rem;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min-content, 15rem));

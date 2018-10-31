@@ -162,6 +162,32 @@
                  -->
             </ul>
             <h4 class="ordering__total">Total</h4>
+            <form class="ordering__form">
+                <fieldset class="ordering__area" >
+                        <select class="ordering__input" required>
+                                <option value="">Minimalna vrednsot za beplatnu dostavu</option>
+                                <option value="12:00">Dedinje (4000din)</option>
+                                <option value="Dorćol (1000din)">Dorćol (1000din)</option>
+                                <option value="Kalenić (1000din)">Kalenić (1000din)</option>
+                                <option value="Karaburma (2500din)">Karaburma (2500din)</option>
+                                <option value="Palilula (1500din)">Palilula (1500din)</option>
+                                <option value="Sava Centar (2500din)">Sava Centar (2500din)</option>
+                                <option value="Savski Venac (2500din)">Savski Venac (2500din)</option>
+                                <option value="Senjak (4000din)">Senjak (4000din)</option>
+                                <option value="Stari Grad (1000din)">Stari Grad (1000din)</option>
+                                <option value="Staro Sajmište (4000din)">Staro Sajmište (4000din)</option>
+                                <option value="Višnjčka banja (2500din)">Višnjčka banja (2500din)</option>
+                                <option value="Vračar (1500din)">Vračar (1500din)</option>
+                                <option value="Zvezdara (1500din)">Zvezdara (1500din)</option>
+                        </select>
+                        <input class="ordering__input" type="text" placeholder="Ime i prezime" required>
+                        <input class="ordering__input" type="phone" placeholder="Telefon" required>
+                        <input class="ordering__input" type="email" placeholder="Email" required>
+                        <input class="ordering__input" type="text" placeholder="Adresa, broj stana i sprat" required>
+                        <textarea class="ordering__textarea" placeholder="Napomena"></textarea>
+                        <button class="btn btn__footer" type="submit">Order</button>
+                </fieldset>
+            </form>
         </div>
     </section>
 
