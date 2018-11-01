@@ -84,6 +84,7 @@
         border: none;
         border-bottom: 7px solid $green;
         transition: .3s;
+        width: 100%;
 
         margin-bottom: 1rem;
         &:invalid {
@@ -95,6 +96,9 @@
             // Media query
             width: 80%;
             align-self: center;
+            @media screen and (-webkit-min-device-pixel-ratio:0) {
+                width: 100%;
+            }
         }
 
         @include respond(phone) {
@@ -104,10 +108,14 @@
     }
     &__textarea {
         margin-bottom: 1rem;
+        width: 100%;
         @include respond(tab-port) {
             // Media query
             width: 80%;
             align-self: center;
+        }
+        @media screen and (-webkit-min-device-pixel-ratio:0) {
+            width: 100%;
         }
     }
 

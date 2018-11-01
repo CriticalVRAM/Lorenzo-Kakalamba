@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "js-concat-first": "concat -o dist/index.js src/js/jquery.onepagenav.js src/js/jquery.tabslet.min.js src/js/lightbox.min.js src/js/svg4everybody.min.js src/js/slick.min.js src/js/index.js",
     "js-concat-second": "concat -o dist/app.js src/js/ordering.js src/js/jquery.tabslet.min.js",
-    "js-concat": "npm run js-concat-first && npm run js-concat-second"
+    "build": "npm run js-concat-first && npm run js-concat-second"
   },
   "repository": {
     "type": "git",
