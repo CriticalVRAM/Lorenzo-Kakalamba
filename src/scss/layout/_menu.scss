@@ -32,6 +32,7 @@
         @include respond(phone) {
             // Media query
             grid-auto-rows: minmax(min-content, 3rem);
+            grid-template-columns: repeat(auto-fill, minmax(min-content, 14rem));
         }
         @include respond(ie11) {
             // Media query
@@ -60,6 +61,10 @@
             }
             span {
                 font-size: 1.6rem;
+                @include respond(phone) {
+                    // Media query
+                    font-size: 1.4rem;
+                }
             }
         }
     }

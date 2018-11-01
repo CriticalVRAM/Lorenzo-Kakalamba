@@ -56,5 +56,9 @@
         max-width: 30rem;
         width: 100%;
         justify-self: end;
+        @include respond(phone) {
+            // Media query
+            max-width: 15rem;
+        }
     }
 }

@@ -6,10 +6,10 @@
     background-color: $red-dark;
     padding-bottom: 3rem;
 
-    @include respond(tab-land) {
+    @include respond(tab-port) {
         // Media query
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
     }
 
     &__shop {
@@ -18,7 +18,8 @@
         margin: 0 2rem;
         @include respond(tab-port) {
             // Media query
-            order: 4;
+            grid-column: 1;
+            grid-row: 2;
         }
     }
     &__cart {
@@ -29,6 +30,11 @@
         grid-template-rows: min-content min-content auto;
 
         margin-right: 1rem;
+        @include respond(tab-port) {
+            // Media query
+            grid-column: 1;
+            grid-row: 4;
+        }
     }
     &__total {
         font-size: 5rem;
@@ -36,6 +42,7 @@
         text-align: center;
         margin-top: 1.5rem;
         font-weight: 300;
+
     }
     &__heading {
         grid-column: 1;
@@ -47,14 +54,16 @@
         margin-top: 2rem;
         @include respond(tab-port) {
             // Media query
-            order: -1;
+            grid-column: 1;
+            grid-row: 1;
         }
         &--cart {
             grid-column: 2;
             grid-row: 1;
             @include respond(tab-port) {
                 // Media query
-                order: 1;
+                grid-column: 1;
+                grid-row: 3;
             }
         }
     }
@@ -81,6 +90,13 @@
             border-bottom: 7px solid $red;
         }
         font-size: 1.6rem;
+
+        @include respond(tab-port) {
+            // Media query
+            width: 80%;
+            align-self: center;
+        }
+
         @include respond(phone) {
             // Media query
             font-size: 1.4rem;
@@ -88,6 +104,11 @@
     }
     &__textarea {
         margin-bottom: 1rem;
+        @include respond(tab-port) {
+            // Media query
+            width: 80%;
+            align-self: center;
+        }
     }
 
     &__list {
@@ -97,6 +118,7 @@
         @include respond(phone) {
             // Media query
             grid-auto-rows: minmax(min-content, 3rem);
+            grid-template-columns: repeat(auto-fill, minmax(min-content, 13rem));
         }
         @include respond(ie11) {
             // Media query
@@ -122,8 +144,16 @@
             a {
                 text-decoration: none;
                 color: white;
+                @include respond(phone) {
+                    // Media query
+                    font-size: 1.8rem;
+                }
                 span {
                     font-size: 1.6rem;
+                    @include respond(phone) {
+                        // Media query
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }
@@ -142,16 +172,33 @@
         background-color: $red;
         padding: 1rem;
         border-radius: 4px;
+
+        @include respond(phone) {
+            // Media query
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+        }
     }
     &__heading {
         grid-column: 1;
         grid-row: 1;
+        @include respond(phone) {
+            // Media query
+            grid-row: 1;
+            grid-column: 1;
+        }
     }
     &__desc {
         font-size: 1.4rem;
         font-style: italic;
         grid-column: 1;
         grid-row: 2;
+        @include respond(phone) {
+            // Media query
+            grid-row: 2;
+            grid-column: 1;
+        }
     }
     &__price {
         font-family: $font-heading;
@@ -159,6 +206,11 @@
         grid-column: 2;
         grid-row: 1 / span 2;
         margin-right: 2rem;
+        @include respond(phone) {
+            // Media query
+            grid-row: 2;
+            grid-column: 2;
+        }
     }
     &__btn {
         background-color: $orange;
@@ -170,6 +222,12 @@
             grid-column: 3;
             grid-row: 1 / span 2;
             padding: .2rem 1rem;
+            @include respond(phone) {
+                // Media query
+                grid-row: 1;
+                grid-column: 2;
+                justify-self: center;
+            }
         }
         &--remove {
             grid-row: 2;
