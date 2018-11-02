@@ -7,7 +7,9 @@ $(window).on('load', function () {
 svg4everybody()
 $(document).ready(function () {
     new SmoothScroll('.link-ani');
-    AOS.init({ duration: 1000 });
+    AOS.init({
+        duration: 1000
+    });
 
     $('.about__slideshow').slick({
         autoplay: true,
@@ -18,6 +20,7 @@ $(document).ready(function () {
     function clearGallery(cur) {
         document.getElementById(cur).innerHTML = '';
     }
+
     function createGallery(cur) {
         // How many images in each section?
         var imgNum;
@@ -42,26 +45,22 @@ $(document).ready(function () {
                 break;
         }
 
-        var galleryTemplate = 
-        '\n                 <div class="gallery__' + cur + '">\n                     <div class="gallery__' + cur + '-selected">\n                        ' + Array(imgNum).join(0).split(0).map(function (item, i) {
-            return '<img src="img/' + cur + (i + 1) + '.jpg" alt="' + cur + ' image ' + (i + 1) + '">';
-        }).join('') + '\n                    </div>\n               <div class="gallery__' + cur + '-view">\n                ' + Array(imgNum).join(0).split(0).map(function (item, i) {
-            return '<img src="img/' + cur + (i + 1) + '.jpg" alt="' + cur + ' image ' + (i + 1) + '">';
-        }).join('') + '\n            </div>\n        </div>\n        ';
-        //     `
-        //          <div class="gallery__${cur}">
-        //              <div class="gallery__${cur}-selected">
-        //                 ${Array(imgNum).join(0).split(0).map((item, i) =>
-        //         `<img src="img/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
-        //             </div>
-        //        <div class="gallery__${cur}-view">
-        //         ${Array(imgNum).join(0).split(0).map((item, i) =>
-        //         `<img src="img/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
-        //     </div>
-        // </div>
-        // `
+        var galleryTemplate =
+            `
+            <div class="gallery__${cur}">
+                <div class="gallery__${cur}-selected">
+                    ${Array(imgNum).join(0).split(0).map((item, i) =>
+                        `<img src="img/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
+                    </div>
+               <div class="gallery__${cur}-view">
+                ${Array(imgNum).join(0).split(0).map((item, i) =>
+                `<img src="img/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
+                </div>
+            </div>
+            `
         document.getElementById(cur).innerHTML = galleryTemplate;
     }
+
     function showImages(cur) {
         $('.gallery__' + cur + '-selected').slick({
             slidesToShow: 1,
@@ -90,6 +89,7 @@ $(document).ready(function () {
             }]
         });
     }
+
     function activateGallery(cur) {
         clearGallery(cur);
         createGallery(cur);
