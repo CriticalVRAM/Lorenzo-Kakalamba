@@ -1,4 +1,6 @@
 .footer {
+    width: 100vw;
+    max-width: 100%;
     display: grid;
     grid-template-columns: 1fr min-content 1fr;
     justify-content: space-between;
@@ -160,7 +162,6 @@
         padding: .5rem;
         border-radius: 10px;
         outline: none;
-        box-shadow: 0;
         border: none;
         border-bottom: 5px solid $green;
         transition: .3s;

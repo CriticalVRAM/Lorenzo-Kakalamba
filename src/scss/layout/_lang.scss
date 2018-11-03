@@ -30,10 +30,11 @@
     &__btn {
         margin-top: 3rem;
         padding: 10px 20px;
+        text-decoration: none;
+        text-align: center;
         
         outline: none;
-        font-size: 1.8rem;
-        font-weight: 300;
+        font-size: 2rem;
         text-transform: uppercase;
         color: white;
         background-color: $red;

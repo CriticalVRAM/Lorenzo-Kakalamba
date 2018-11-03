@@ -1,4 +1,6 @@
 .booking {
+    width: 100vw;
+    max-width: 100%;
     padding: 7rem 1rem;
     background-color: $red-dark;
     @include respond(phone) {

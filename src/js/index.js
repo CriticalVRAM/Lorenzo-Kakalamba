@@ -104,13 +104,16 @@ $(document).ready(function () {
 
     //Event listener set up
     var posible = ['interior', 'garden', 'events', 'food', 'deserts', 'details'];
-    document.querySelector('.gallery__box').addEventListener('click', function (event) {
-        if (posible.includes(event.target.innerHTML)) {
-            activateGallery(event.target.innerHTML);
-        }
-    }, true);
-    posible.forEach(cur => activateGallery(cur))
-    activateGallery('interior');
+    if (document.querySelector('.gallery__box')) {
+        document.querySelector('.gallery__box').addEventListener('click', function (event) {
+            if (posible.includes(event.target.innerHTML)) {
+                activateGallery(event.target.innerHTML);
+                window.dispatchEvent(new Event('resize'));
+            }
+        }, true);
+        posible.forEach(cur => activateGallery(cur))
+        activateGallery('interior');
+    }
 
 
     $('.nav').onePageNav({
