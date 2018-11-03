@@ -4,10 +4,7 @@
   "description": "Modern restaurant website designed by me and made by me.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "js-concat-first": "concat -o dist/index.js src/js/jquery.onepagenav.js src/js/jquery.tabslet.min.js src/js/lightbox.min.js src/js/svg4everybody.min.js src/js/slick.min.js src/js/index.babel.js",
-    "js-concat-second": "concat -o dist/app.js src/js/ordering.js src/js/jquery.tabslet.min.js",
-    "build": "npm run js-concat-first && npm run js-concat-second"
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +15,24 @@
   "bugs": {
     "url": "https://github.com/Nani-Sore-0/Lorenzo/issues"
   },
-  "homepage": "https://github.com/Nani-Sore-0/Lorenzo#readme"
+  "homepage": "https://github.com/Nani-Sore-0/Lorenzo#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.4",
+    "webpack": "^4.24.0",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "aos": "^2.3.4",
+    "jquery": "^3.3.1",
+    "lightbox2": "^2.10.0",
+    "slick-carousel": "^1.8.1",
+    "smooth-scroll": "^14.2.1",
+    "svg4everybody": "^2.1.9",
+    "tabslet": "^1.7.3"
+  }
 }
