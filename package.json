@@ -4,7 +4,8 @@
   "description": "Modern restaurant website designed by me and made by me.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "pages": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
