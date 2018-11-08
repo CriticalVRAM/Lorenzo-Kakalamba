@@ -71,6 +71,7 @@
         }
         p span {
             color: $orange;
+            font-weight: bold;
         }
         @include respond(ie11) {
             // Media query
