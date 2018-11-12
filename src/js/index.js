@@ -19,7 +19,8 @@ $(document).ready(function () {
     $('.about__slideshow').slick({
         autoplay: true,
         arrows: false,
-        autoplaySpeed: 2000
+        autoplaySpeed: 2000,
+        lazyLoad: 'progressive'
     });
 
     function clearGallery(cur) {
@@ -68,16 +69,15 @@ $(document).ready(function () {
 
     function showImages(cur) {
         $('.gallery__' + cur + '-selected').slick({
+            adaptiveHeight: true,
             slidesToShow: 1,
             slidesToScroll: 1,
             fade: true,
             asNavFor: '.gallery__' + cur + '-view',
-            adaptiveHeight: true,
             prevArrow: '<a class="gallery__prev"><svg class="gallery__icon"><use href="img/sprite.svg#icon-chevron-left"></use></svg></a>',
             nextArrow: '<a class="gallery__next"><svg class="gallery__icon"><use href="img/sprite.svg#icon-chevron-right"></use></svg></a>',
             lazyLoad: 'progressive'
         });
-        $('.gallery__' + cur + '-selected').slick('setPosition')
 
         $('.gallery__' + cur + '-view').slick({
             slidesToShow: 4,
@@ -101,7 +101,6 @@ $(document).ready(function () {
         clearGallery(cur);
         createGallery(cur);
         showImages(cur);
-        window.dispatchEvent(new Event('resize'));
     }
 
     //Event listener set up

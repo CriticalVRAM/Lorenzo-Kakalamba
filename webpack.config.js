@@ -3,6 +3,7 @@ const path = require("path");
 
 module.exports = {
     mode: "production",
+    performance: { hints: false },
     entry: ["@babel/polyfill", "./src/js/jquery.onepagenav.js", "./src/js/svg4everybody.min.js", "./src/js/index.js"],
     output: {
         path: path.resolve(__dirname, "dist"),
