@@ -20,7 +20,7 @@ $(document).ready(function () {
         autoplay: true,
         arrows: false,
         autoplaySpeed: 2000,
-        lazyLoad: 'ondemand'
+        lazyLoad: 'progressive'
     });
 
     function clearGallery(cur) {
