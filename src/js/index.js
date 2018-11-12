@@ -56,11 +56,11 @@ $(document).ready(function () {
             <div class="gallery__${cur}">
                 <div class="gallery__${cur}-view">
                     ${Array(imgNum).join(0).split(0).map((item, i) =>
-                    `<img class="gallery__img" data-lazy="img/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
+                    `<img class="gallery__img" data-lazy="assets/images/gallery/${cur}/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
                 </div>
                 <div class="gallery__${cur}-selected">
                     ${Array(imgNum).join(0).split(0).map((item, i) =>
-                    `<img class="gallery__img" data-lazy="img/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
+                    `<img class="gallery__img" data-lazy="assets/images/gallery/${cur}/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
                 </div>
             </div>
             `
@@ -73,8 +73,8 @@ $(document).ready(function () {
             slidesToScroll: 1,
             fade: true,
             asNavFor: '.gallery__' + cur + '-view',
-            prevArrow: '<a class="gallery__prev"><svg class="gallery__icon"><use href="img/sprite.svg#icon-chevron-left"></use></svg></a>',
-            nextArrow: '<a class="gallery__next"><svg class="gallery__icon"><use href="img/sprite.svg#icon-chevron-right"></use></svg></a>',
+            prevArrow: '<a class="gallery__prev"><svg class="gallery__icon"><use href="assets/images/components/sprite.svg#icon-chevron-left"></use></svg></a>',
+            nextArrow: '<a class="gallery__next"><svg class="gallery__icon"><use href="assets/images/components/sprite.svg#icon-chevron-right"></use></svg></a>',
             lazyLoad: 'ondemand'
         });
 
