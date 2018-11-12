@@ -75,7 +75,7 @@ $(document).ready(function () {
             adaptiveHeight: true,
             prevArrow: '<a class="gallery__prev"><svg class="gallery__icon"><use href="img/sprite.svg#icon-chevron-left"></use></svg></a>',
             nextArrow: '<a class="gallery__next"><svg class="gallery__icon"><use href="img/sprite.svg#icon-chevron-right"></use></svg></a>',
-            lazyLoad: 'ondemand'
+            lazyLoad: 'progressive'
         });
         $('.gallery__' + cur + '-selected').slick('setPosition')
 
@@ -86,7 +86,7 @@ $(document).ready(function () {
             centerMode: true,
             focusOnSelect: true,
             arrows: false,
-            lazyLoad: 'ondemand',
+            lazyLoad: 'progressive',
             responsive: [{
                 breakpoint: 600,
                 settings: {
