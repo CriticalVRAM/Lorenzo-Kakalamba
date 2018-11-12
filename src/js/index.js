@@ -55,11 +55,11 @@ $(document).ready(function () {
             <div class="gallery__${cur}">
                 <div class="gallery__${cur}-selected">
                     ${Array(imgNum).join(0).split(0).map((item, i) =>
-                        `<img src="img/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
+                        `<img data-lazy="img/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
                     </div>
                <div class="gallery__${cur}-view">
                 ${Array(imgNum).join(0).split(0).map((item, i) =>
-                `<img src="img/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
+                `<img data-lazy="img/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
                 </div>
             </div>
             `
@@ -74,7 +74,8 @@ $(document).ready(function () {
             asNavFor: '.gallery__' + cur + '-view',
             adaptiveHeight: true,
             prevArrow: '<a class="gallery__prev"><svg class="gallery__icon"><use href="img/sprite.svg#icon-chevron-left"></use></svg></a>',
-            nextArrow: '<a class="gallery__next"><svg class="gallery__icon"><use href="img/sprite.svg#icon-chevron-right"></use></svg></a>'
+            nextArrow: '<a class="gallery__next"><svg class="gallery__icon"><use href="img/sprite.svg#icon-chevron-right"></use></svg></a>',
+            lazyLoad: 'ondemand'
         });
         $('.gallery__' + cur + '-selected').slick('setPosition')
 
@@ -85,6 +86,7 @@ $(document).ready(function () {
             centerMode: true,
             focusOnSelect: true,
             arrows: false,
+            lazyLoad: 'ondemand',
             responsive: [{
                 breakpoint: 600,
                 settings: {
