@@ -20,7 +20,7 @@ $(document).ready(function () {
         autoplay: true,
         arrows: false,
         autoplaySpeed: 2000,
-        lazyLoad: 'progressive'
+        lazyLoad: 'ondemand'
     });
 
     function clearGallery(cur) {
@@ -54,13 +54,13 @@ $(document).ready(function () {
         var galleryTemplate =
             `
             <div class="gallery__${cur}">
+                <div class="gallery__${cur}-view">
+                    ${Array(imgNum).join(0).split(0).map((item, i) =>
+                    `<img class="gallery__img" data-lazy="img/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
+                </div>
                 <div class="gallery__${cur}-selected">
                     ${Array(imgNum).join(0).split(0).map((item, i) =>
-                        `<img data-lazy="img/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
-                    </div>
-               <div class="gallery__${cur}-view">
-                ${Array(imgNum).join(0).split(0).map((item, i) =>
-                `<img data-lazy="img/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
+                    `<img class="gallery__img" data-lazy="img/${cur}${i + 1}.jpg" alt="${cur} image ${i + 1}">`).join('')}
                 </div>
             </div>
             `
@@ -69,14 +69,13 @@ $(document).ready(function () {
 
     function showImages(cur) {
         $('.gallery__' + cur + '-selected').slick({
-            adaptiveHeight: true,
             slidesToShow: 1,
             slidesToScroll: 1,
             fade: true,
             asNavFor: '.gallery__' + cur + '-view',
             prevArrow: '<a class="gallery__prev"><svg class="gallery__icon"><use href="img/sprite.svg#icon-chevron-left"></use></svg></a>',
             nextArrow: '<a class="gallery__next"><svg class="gallery__icon"><use href="img/sprite.svg#icon-chevron-right"></use></svg></a>',
-            lazyLoad: 'progressive'
+            lazyLoad: 'ondemand'
         });
 
         $('.gallery__' + cur + '-view').slick({
@@ -86,7 +85,7 @@ $(document).ready(function () {
             centerMode: true,
             focusOnSelect: true,
             arrows: false,
-            lazyLoad: 'progressive',
+            lazyLoad: 'ondemand',
             responsive: [{
                 breakpoint: 600,
                 settings: {
