@@ -19,8 +19,7 @@ $(document).ready(function () {
     $('.about__slideshow').slick({
         autoplay: true,
         arrows: false,
-        autoplaySpeed: 2000,
-        lazyLoad: 'progressive'
+        autoplaySpeed: 2000
     });
 
     function clearGallery(cur) {
