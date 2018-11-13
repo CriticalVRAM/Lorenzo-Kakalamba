@@ -70,6 +70,7 @@
         }
         
     }
+
     &__icon {
         background-color: $red;
         fill: white;
@@ -86,6 +87,32 @@
             height: 5rem;
         }
     }
+
+    &__interior-view,
+    &__garden-view,
+    &__deatils-view,
+    &__events-view,
+    &__food-view,
+    &__deserts-view {
+        max-height: 14rem;
+        overflow: hidden;
+        @include respond(tab-land) {
+            // Media query
+            max-height: 18rem;
+        }
+        @include respond(tab-port) {
+            // Media query
+            max-height: 13rem;
+        }
+        @include respond(phone) {
+            // Media query
+            max-height: 7rem;
+        }
+    }
+
+
+
+
     &__next {
         position: absolute;
         right: -1px;
@@ -93,6 +120,7 @@
         z-index: 10;
         cursor: pointer;
     }
+
     &__prev {
         position: absolute;
         z-index: 10;
