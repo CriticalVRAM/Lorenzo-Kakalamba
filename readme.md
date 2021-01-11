@@ -2,4 +2,4 @@
 
 ## Modern restaurant website designed and made by me
 
-### [Website demo](https://nani-sore-0.github.io/Lorenzo-Kakalamba/)
+### [Website demo](https://nanibyte.github.io/Lorenzo-Kakalamba/)
